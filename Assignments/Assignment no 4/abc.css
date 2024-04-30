@@ -1,0 +1,93 @@
+.header{
+  background-color: chartreuse;
+}
+
+.intro{
+  color: gold;
+}
+
+ .summary{
+  color: gold;
+ }
+
+
+.contact{
+  color: gold;
+  z-index: 3244444444444;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav {
+    background-color: firebrick;
+    padding: 10px;
+  }
+  
+  nav ul {
+    /* list-style: none; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  a {
+    color: gold;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #000;
+  }
+
+  .introaudio{
+    color: crimson;
+  }
+
+  .facebook{
+    color: crimson;
+  }
+
+  .whatsapp{
+    color: crimson;
+  }
+
+  .Email{
+    color: crimson;
+  }
+
+  .introvideo{
+    width: 100%;
+    margin-top: 0px;
+  }
