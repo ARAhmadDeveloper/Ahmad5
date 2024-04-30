@@ -1,0 +1,47 @@
+h1{
+    background-color: aqua;
+    border-color: brown;
+    border-style: solid;
+    border-width: 50px;
+}
+
+.imp{
+    background-color: aquamarine;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border-color: rgb(13, 13, 15);
+    border-width: 20px;
+    padding: 100px;
+}
+
+div{
+    background-color: blue
+   
+
+}
+
+h2{
+    background-color: blue
+   
+
+
+}
+
+h2,h3{
+    color: aqua;
+    border-style: solid;
+}
+
+.vip{
+    border-style: solid;
+    border-color: brown;
+} 
+
+body{
+    background-color: cadetblue;
+}
+p{
+    padding: 50px;
+    background-color: aqua;
+}
