@@ -1,0 +1,114 @@
+/* Reset default styles for all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Style the HTML and body elements */
+html, body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #202020;
+}
+
+/* Style the container for the loading animation */
+.wrapper {
+    width: 200px;
+    height: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Style the circles representing the loading animation */
+.circle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 15%;
+    border-radius: 50%;
+    background: #fff;
+    transform-origin: 50%;
+    animation: circle1 .5s alternate infinite ease;
+}
+
+/* Define keyframes for the circle animation */
+@keyframes circle1 {
+    0% {
+        top: 60px;
+        height: 5px;
+        border-radius: 50px 50px 25px 25px;
+        transform: scaleX(1.7);
+    }
+
+    40% {
+        height: 20px;
+        border-radius: 50%;
+        transform: scaleX(1);
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+/* Style the first circle */
+.circle:nth-child(1) {
+    background-color: rgb(255, 0, 144);
+}
+/* Style the second circle */
+.circle:nth-child(2) {
+    left: 45%;
+    background-color: rgb(111, 255, 0);
+    animation-delay: .2s;
+}
+/* Style the third circle */
+.circle:nth-child(3) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+    background-color: rgb(255, 255, 0);
+}
+/* Style the shadows for each circle */
+.shadow {
+    width: 20px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 62px;
+    transform-origin: 50%;
+    z-index: -1;
+    left: 15%;
+    filter: blur(1px);
+    animation: shadow1 .5s alternate infinite ease;
+}
+/* Define keyframes for the shadow animation */
+@keyframes shadow1 {
+    0% {
+        transform: scaleX(1.5);
+    }
+
+    40% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(.2);
+        opacity: .4;
+    }
+}
+
+/* Style the shadow for the second circle */
+.shadow:nth-child(4) {
+    left: 45%;
+    animation-delay: .2s;
+}
+
+/* Style the shadow for the third circle */
+.shadow:nth-child(5) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+}

@@ -1,0 +1,105 @@
+/* Import Google Font 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Global styling for all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Styling for HTML and body */
+html,
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #222327;
+}
+
+/* Styling for the wrapper container */
+.wrapper {
+    position: relative;
+    height: 80px;
+    width: 620px;
+    background-color: #ecf0f1;
+    border-radius: 17px;
+    box-shadow: 3px 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the unordered list */
+.wrapper ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for list items within the unordered list */
+.wrapper ul li {
+    position: relative;
+    list-style: none;
+    line-height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling for tooltips */
+.tooltip {
+    position: absolute;
+    top: -20px;
+    height: 40px;
+    width: 100px;
+    background: #29fd53;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+    pointer-events: none;
+    margin: 0 10px;
+    transition: 0.5s;
+    border: 6px solid #000;
+    opacity: 0;
+}
+
+/* Styling for tooltip arrow - left */
+.tooltip::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -10px 0 0 #222327;
+}
+
+/* Styling for tooltip arrow - right */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: 0 -10px 0 0 #222327;
+}
+
+/* Hover effect for list items to display tooltips */
+.wrapper ul li:hover .tooltip {
+    opacity: 1;
+}
+
+/* Styling for anchor tags within list items */
+.wrapper ul li a {
+    display: block;
+    color: #000;
+    font-size: 1.5em;
+    margin: 0 50px;
+}
