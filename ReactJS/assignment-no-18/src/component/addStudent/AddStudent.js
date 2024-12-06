@@ -105,7 +105,7 @@ export default function AddStudent(props) {
               className="myBtn"
               onClick={handleSubmit}
             >
-              {props.currentStudent ? "Add" : "Update"} Student
+              {props.currentStudent ? "Update Student" : "Add Student"} 
             </Button>{" "}
             <br />
           </div>
