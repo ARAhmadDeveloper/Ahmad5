@@ -1,3 +1,6 @@
+# To Preview My Portfolio click below
+[Preview](https://myportfoliowithreact.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
