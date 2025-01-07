@@ -1,20 +1,9 @@
 ## Technologies Used
 
-<div style="background-color: #61DBFB; color: white; padding: 10px; border-radius: 5px; display: inline-block; margin: 5px;">
-  <strong>Frontend:</strong> ReactJS, NextJS
-</div>
-
-<div style="background-color: #8CC84B; color: white; padding: 10px; border-radius: 5px; display: inline-block; margin: 5px;">
-  <strong>Backend:</strong> Node.js, Express
-</div>
-
-<div style="background-color: #61DAFB; color: white; padding: 10px; border-radius: 5px; display: inline-block; margin: 5px;">
-  <strong>Mobile:</strong> React Native
-</div>
-
-<div style="background-color: #4DB33D; color: white; padding: 10px; border-radius: 5px; display: inline-block; margin: 5px;">
-  <strong>Database:</strong> MongoDB
-</div>
+- **Frontend:** ![ReactJS](https://img.shields.io/badge/ReactJS-61DBFB?style=for-the-badge&logo=react&logoColor=white) ![NextJS](https://img.shields.io/badge/NextJS-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+- **Backend:** ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+- **Mobile:** ![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+- **Database:** ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
 
 ## 💬 Contact
