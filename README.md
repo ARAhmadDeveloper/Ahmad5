@@ -1,9 +1,21 @@
 ## Technologies Used
 
-- **Frontend:** [ReactJS, NextJS]
-- **Backend:** [Node.js, Express]
-- **Mobile:** [React Native]
-- **Database:** [MongoDB]
+<div style="background-color: #61DBFB; color: white; padding: 10px; border-radius: 5px; display: inline-block; margin: 5px;">
+  <strong>Frontend:</strong> ReactJS, NextJS
+</div>
+
+<div style="background-color: #8CC84B; color: white; padding: 10px; border-radius: 5px; display: inline-block; margin: 5px;">
+  <strong>Backend:</strong> Node.js, Express
+</div>
+
+<div style="background-color: #61DAFB; color: white; padding: 10px; border-radius: 5px; display: inline-block; margin: 5px;">
+  <strong>Mobile:</strong> React Native
+</div>
+
+<div style="background-color: #4DB33D; color: white; padding: 10px; border-radius: 5px; display: inline-block; margin: 5px;">
+  <strong>Database:</strong> MongoDB
+</div>
+
 
 ## 💬 Contact
 
@@ -16,15 +28,3 @@ Feel free to reach out with any questions or collaboration ideas:
 ---
 
 _I'm always open to connecting and exploring new opportunities!_ 🚀
-
-<div style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">
-  This is a green box with white text!
-</div>
-
-<div style="background-color: #f44336; color: white; padding: 10px; border-radius: 5px;">
-  This is a red box with white text!
-</div>
-
-<div style="background-color: #2196F3; color: white; padding: 10px; border-radius: 5px;">
-  This is a blue box with white text!
-</div>
