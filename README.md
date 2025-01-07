@@ -16,3 +16,15 @@ Feel free to reach out with any questions or collaboration ideas:
 ---
 
 _I'm always open to connecting and exploring new opportunities!_ 🚀
+
+<div style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">
+  This is a green box with white text!
+</div>
+
+<div style="background-color: #f44336; color: white; padding: 10px; border-radius: 5px;">
+  This is a red box with white text!
+</div>
+
+<div style="background-color: #2196F3; color: white; padding: 10px; border-radius: 5px;">
+  This is a blue box with white text!
+</div>
