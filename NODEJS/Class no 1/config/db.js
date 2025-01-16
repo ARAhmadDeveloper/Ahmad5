@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = process.env.MONGO_URI || "error mongouri";
 
-
+console.log(MONGO_URI)
 
 
 // Function to connect MongoDB with mongoose
