@@ -9,7 +9,7 @@ const productRouter = require("./routes/productRoutes.js");
 const app = express();
 const jwt = require('jsonwebtoken');
 const dotenv = require("dotenv");
-
+ 
 dotenv.config();
 const port =  8000
 console.log("Port>>>>>>>>>>>",port);
@@ -20,8 +20,6 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-
 
 
 
