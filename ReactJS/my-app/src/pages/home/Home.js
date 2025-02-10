@@ -1,11 +1,17 @@
+import Products from "../../components/products/Products";
 
 
-export default function Home(){
+
+function Home(){
     return(
         <div>
-            Home Page
+            <Products />
         </div>
     )
 }
+
+export default Home;
+
+
 
 

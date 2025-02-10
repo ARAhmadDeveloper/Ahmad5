@@ -1,13 +1,13 @@
 const express = require("express");
 const productRouter = express.Router();
-const authVerify = require("../middlewares/auth");
+// const authVerify = require("../middlewares/auth");
 const { getProducts, createProduct , deleteProduct , updateProduct } = require("../controllers/productController");
 
 
-productRouter.get("/", authVerify, getProducts);
-productRouter.post("/create", authVerify, createProduct);
-productRouter.delete("/delete/:id", authVerify, deleteProduct);
-productRouter.put("/update/:id", authVerify, updateProduct);
+productRouter.get("/", getProducts);
+productRouter.post("/create", createProduct);
+productRouter.delete("/delete/:id", deleteProduct);
+productRouter.put("/update/:id", updateProduct);
 
 
 

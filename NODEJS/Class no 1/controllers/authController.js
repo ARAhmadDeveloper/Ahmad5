@@ -61,6 +61,62 @@ const doLogin = async (req, res) => {
     }
   }
 
+
+  // const doSignup = async (req, res) => {
+  //   try {
+  //     const { name, email, password, address } = req.body;
+  
+  //     // Check if required fields are provided
+  //     if (!password) {
+  //       return res.status(400).json({
+  //         data: [],
+  //         message: "Error",
+  //         error: "Password is required",
+  //       });
+  //     }
+  
+  //     // Hash the password asynchronously
+  //     const hashedPassword = await bcrypt.hash(password, 10);
+  
+  //     // Create new user
+  //     const newUser = new User({
+  //       name,
+  //       email,
+  //       password: hashedPassword,
+  //       address,
+  //       createdAt: new Date(),
+  //     });
+  
+  //     // Save user to the database
+  //     const savedUser = await newUser.save();
+  
+  //     // Generate JWT token
+  //     const token = jwt.sign({ id: savedUser._id, email: savedUser.email }, SECRET_KEY, { expiresIn: "7d" });
+  
+  //     // Respond with user data and token
+  //     res.status(201).json({
+  //       data: savedUser,
+  //       token,
+  //       message: "Signup successful",
+  //     });
+  //   } catch (error) {
+  //     console.error("Signup Error:", error);
+  //     res.status(500).json({
+  //       data: [],
+  //       message: "Error in Signup",
+  //       error: error.message,
+  //     });
+  //   }
+  // };
+  
+
+
+
+
+
+
+
+
 const doSignup =  async (req, res) => {
     try {
       if(!req?.body?.password){
