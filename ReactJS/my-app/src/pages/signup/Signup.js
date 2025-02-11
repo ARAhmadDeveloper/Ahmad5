@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [formData, setFormData] = useState({
-    username: "",
+    name: "",
     email: "",
     password: "",
     address: "",
@@ -32,13 +32,13 @@ export default function Signup() {
       });
 
       const data = await response.json();
-      console.log("Response Data:", data);
+      console.log("Response Data: =======>>>>>>>", data);
 
       if (response.ok) {
         localStorage.setItem("token", data.token);
-
+console.log("Tooookkkkeeeennn ========>>>>>",data.token)
         setTimeout(() => {
-          navigate("/");
+          navigate("/login");
         }, 2000);
       } else {
         setError(data.error || "Signup failed");
@@ -58,7 +58,7 @@ export default function Signup() {
         {error && <p className="error-message">{error}</p>}
 
         {[
-          { label: "Username", name: "username", type: "text" },
+          { label: "name", name: "name", type: "text" },
           { label: "Email", name: "email", type: "email" },
           { label: "Address", name: "address", type: "text" },
         ].map((field, index) => (

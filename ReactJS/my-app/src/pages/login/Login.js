@@ -51,17 +51,18 @@ export default function LoginForm() {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-      console.log("Response Data:", data);
+      const responseData = await response.json();
+      console.log("Response Data:", responseData);
 
       if (response.ok) {
-        localStorage.setItem("token", data.token);
+        localStorage.setItem("token", responseData.data.token);
+        console.log("Token ============>>>>>>>:", responseData.data.token);
 
         setTimeout(() => {
           navigate("/");
         }, 2000); // Delay for smooth transition
       } else {
-        setErrors({ ...errors, general: data.error || "Invalid credentials. Please try again." });
+        setErrors({ ...errors, general: responseData.error || "Invalid credentials. Please try again." });
       }
     } catch (error) {
       setErrors({ ...errors, general: "Something went wrong. Please try again later." });

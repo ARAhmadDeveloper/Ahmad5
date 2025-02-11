@@ -1,4 +1,4 @@
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const dotenv = require("dotenv");
 dotenv.config();
@@ -39,7 +39,7 @@ const doLogin = async (req, res) => {
         });
       }
       let token = jwt.sign({_id: findUser._id, email: findUser.email, name: findUser.name}, secretKey);
-      console.log("Token: ", token);
+      // console.log("Token: ", token);
       
   
       res.status(200).json({
@@ -117,36 +117,55 @@ const doLogin = async (req, res) => {
 
 
 
-const doSignup =  async (req, res) => {
+  
+  const doSignup = async (req, res) => {
     try {
-      if(!req?.body?.password){
-        res.status(501).json({
+      // Check if password is provided
+      if (!req?.body?.password) {
+        return res.status(400).json({
           data: [],
           message: "Error",
           error: "Password is required",
         });
       }
-      let hashedPassword = await bcrypt.hashSync(req?.body?.password, 10);
+  
+      // Hash the password
+      let hashedPassword = await bcrypt.hash(req?.body?.password, 10);
+  
+      // Create new user
       let newUser = new User({
         name: req?.body?.name,
         email: req?.body?.email,
         password: hashedPassword,
         address: req?.body?.address,
         createdAt: new Date(),
-      })
+      });
+  
+      // Save user to the database
       let savedUser = await newUser.save();
-      res.json({
+  
+      // Generate JWT token
+      const token = jwt.sign(
+        { userId: savedUser._id, email: savedUser.email }, // Payload
+        process.env.SECRET_KEY, // Secret key (store in .env)
+        { expiresIn: "7d" } // Token expiration
+      );
+  
+      // Send response with token
+      res.status(201).json({
         data: savedUser,
-        message: "Success",
+        message: "Signup successful",
+        token: token, // Send token to frontend
       });
     } catch (error) {
-      res.json({
+      res.status(500).json({
         data: [],
         message: "Error in Signup",
         error: error.message,
       });
     }
-  }
+  };
+  
 
 module.exports = {
   doLogin,
