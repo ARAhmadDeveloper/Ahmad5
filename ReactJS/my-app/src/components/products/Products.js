@@ -2,16 +2,18 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Button from "../deleteBtn/DeleteBtn";
 import "./product.css"
+import Loading from "../loading/Loading";
 
 function Products() {
   const [products, setProducts] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
       .get("http://localhost:8000/products")
       .then((response) => {
         console.log("Fetched products:", response.data);
         setProducts(response.data.products);
+        setLoading(false);
       })
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
@@ -31,6 +33,7 @@ function Products() {
   };
 
   return (
+    
     <div className="products-container">
       <h2 className="products-title">Our Products</h2>
       <div className="products-grid">
@@ -62,7 +65,8 @@ function Products() {
             </div>
           ))
         ) : (
-          <p className="no-products">No products available.</p>
+          // <p className="no-products">No products available.</p>
+         <Loading />
         )}
       </div>
       <style jsx>{`
