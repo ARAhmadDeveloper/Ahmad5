@@ -1,0 +1,50 @@
+/* Button Styling */
+.myBtn {
+    background-color: #007bff; /* Primary blue color */
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .myBtn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-5px); /* Lift button on hover */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Focus effect (when clicked or selected) */
+  .myBtn:focus {
+    outline: none;
+    border: 2px solid #0056b3;
+  }
+  
+  /* Active effect (when button is pressed) */
+  .myBtn:active {
+    transform: translateY(2px); /* Slight push down when pressed */
+  }
+  
+  /* Animated effect when the button first loads */
+  @keyframes buttonPop {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .myBtn {
+    animation: buttonPop 0.5s ease-out;
+  }
+  

@@ -1,0 +1,118 @@
+/* home.css */
+
+.home-page {
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid layout */
+  gap: 20px;
+  padding: 0;
+  justify-items: center;
+  width: 100%; /* Ensures it spans across the available space */
+}
+
+.product-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #eee;
+}
+
+.product-item h2 {
+  font-size: 1.3rem;
+  color: #333;
+  padding: 10px 15px;
+  margin: 0;
+}
+
+.product-item p {
+  font-size: 1rem;
+  color: #666;
+  padding: 0 15px 15px;
+}
+
+.product-item .product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-item:hover {
+  transform: translateY(-10px); /* Hover animation */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.product-item:hover h2 {
+  color: #007bff; /* Change color on hover */
+}
+
+.product-item:hover p {
+  color: #444; /* Slight text color change */
+}
+
+.product-item:hover img {
+  transform: scale(1.05); /* Slight zoom on image */
+  transition: transform 0.3s ease;
+}
+
+.product-item .price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-top: 2px solid #eee;
+  transition: background-color 0.3s ease;
+}
+
+.product-item:hover .price {
+  background-color: #007bff; /* Change background on hover */
+  color: white; /* Change text color */
+}
+
+/* Media Queries to make it more responsive on smaller devices */
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust for smaller screens */
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    grid-template-columns: 1fr; /* Stacked layout on very small screens */
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .product-item {
+    max-width: 100%;
+  }
+}
