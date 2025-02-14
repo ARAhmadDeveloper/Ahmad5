@@ -6,6 +6,7 @@ const connectMongoDB = require("./config/db");
 const authRouter = require("./routes/authRoutes");
 const todoRouter = require("./routes/todoRoutes");
 const productRouter = require("./routes/productRoutes.js");
+const contactRouter = require("./routes/contactRoutes.js");
 const app = express();
 const jwt = require('jsonwebtoken');
 const dotenv = require("dotenv");
@@ -44,6 +45,7 @@ connectMongoDB();
 app.use("/auth", authRouter);
 app.use("/todos", todoRouter);
 app.use("/products", productRouter);
+app.use("/contact", contactRouter);
 
 
 
