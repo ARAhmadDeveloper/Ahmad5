@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import "./contact.css"; // Import the CSS file
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -10,15 +14,15 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       const response = await fetch("http://localhost:8000/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      console.log("contactData ========>>>>>>>>",formData)
-  
+      console.log("contactData ========>>>>>>>>", formData);
+
       const data = await response.json();
       if (data.success) {
         alert("Message Sent Successfully!");
@@ -26,18 +30,20 @@ export default function Contact() {
       } else {
         alert("Something went wrong!");
       }
-      console.log("contactData ========>>>>>>>>",data);
+      console.log("contactData ========>>>>>>>>", data);
     } catch (error) {
       console.error("Error:", error);
       alert("Server Error!");
     }
   };
-  
+
   return (
     <div className="contact-container">
       <div className="contact-card">
         <h1>Contact Us</h1>
-        <p>Have any questions? Reach out to us and we'll get back to you soon!</p>
+        <p>
+          Have any questions? Reach out to us and we'll get back to you soon!
+        </p>
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <input
@@ -68,7 +74,9 @@ export default function Contact() {
               required
             />
           </div>
-          <button type="submit" className="submit-btn">Send Message</button>
+          <button type="submit" className="submit-btn">
+            Send Message
+          </button>
         </form>
       </div>
     </div>

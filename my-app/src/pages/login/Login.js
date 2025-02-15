@@ -37,7 +37,10 @@ export default function LoginForm() {
       return;
     }
     if (formData.password.length < 6) {
-      setErrors({ ...errors, password: "Password must be at least 6 characters." });
+      setErrors({
+        ...errors,
+        password: "Password must be at least 6 characters.",
+      });
       setIsLoading(false);
       return;
     }
@@ -62,10 +65,17 @@ export default function LoginForm() {
           navigate("/");
         }, 2000); // Delay for smooth transition
       } else {
-        setErrors({ ...errors, general: responseData.error || "Invalid credentials. Please try again." });
+        setErrors({
+          ...errors,
+          general:
+            responseData.error || "Invalid credentials. Please try again.",
+        });
       }
     } catch (error) {
-      setErrors({ ...errors, general: "Something went wrong. Please try again later." });
+      setErrors({
+        ...errors,
+        general: "Something went wrong. Please try again later.",
+      });
     } finally {
       setTimeout(() => setIsLoading(false), 2000);
     }
@@ -117,7 +127,9 @@ export default function LoginForm() {
         </div>
 
         {/* General Error Message */}
-        {errors.general && <p className="error-text general-error">{errors.general}</p>}
+        {errors.general && (
+          <p className="error-text general-error">{errors.general}</p>
+        )}
 
         {/* Submit Button with Loading Spinner */}
         <button type="submit" className="submit-btn" disabled={isLoading}>
@@ -352,11 +364,11 @@ export default function LoginForm() {
             padding: 1.5rem;
             border-radius: 15px;
           }
-          
+
           .form-title {
             font-size: 1.75rem;
           }
-          
+
           .form-input {
             padding: 0.7rem 1rem;
           }
@@ -365,33 +377,6 @@ export default function LoginForm() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import { useState } from "react";
 // import { Eye, EyeOff } from "lucide-react";
@@ -445,7 +430,7 @@ export default function LoginForm() {
 //     <div className="login-container">
 //       <form onSubmit={handleSubmit} className="login-form">
 //         <h2 className="form-title">Welcome Back</h2>
-        
+
 //         {error && <div className="error-message">{error}</div>}
 
 //         <div className="input-group" style={{ animationDelay: "0.1s" }}>
@@ -481,8 +466,8 @@ export default function LoginForm() {
 //           </div>
 //         </div>
 
-//         <button 
-//           type="submit" 
+//         <button
+//           type="submit"
 //           className="submit-btn"
 //           disabled={loading}
 //         >
@@ -629,11 +614,11 @@ export default function LoginForm() {
 //             padding: 1.5rem;
 //             border-radius: 15px;
 //           }
-          
+
 //           .form-title {
 //             font-size: 1.75rem;
 //           }
-          
+
 //           .form-input {
 //             padding: 0.7rem 1rem;
 //           }

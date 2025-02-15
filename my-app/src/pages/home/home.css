@@ -6,18 +6,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
 }
 
-h1 {
+div h1 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
   color: #333;
 }
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Responsive grid layout */
   gap: 20px;
   padding: 0;
   justify-items: center;
@@ -95,7 +99,10 @@ h1 {
 /* Media Queries to make it more responsive on smaller devices */
 @media (max-width: 768px) {
   .product-list {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust for smaller screens */
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(250px, 1fr)
+    ); /* Adjust for smaller screens */
   }
 
   h1 {

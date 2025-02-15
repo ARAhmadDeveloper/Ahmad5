@@ -36,7 +36,7 @@ export default function Signup() {
 
       if (response.ok) {
         localStorage.setItem("token", data.token);
-console.log("Tooookkkkeeeennn ========>>>>>",data.token)
+        console.log("Tooookkkkeeeennn ========>>>>>", data.token);
         setTimeout(() => {
           navigate("/login");
         }, 2000);
@@ -284,44 +284,58 @@ console.log("Tooookkkkeeeennn ========>>>>>",data.token)
             padding: 1.5rem;
             border-radius: 15px;
           }
-          
+
           .form-title {
             font-size: 1.75rem;
           }
-          
+
           .form-input {
             padding: 0.7rem 1rem;
           }
         }
-          .products-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    background: linear-gradient(90deg, #ff416c, #ff4b2b, #ffbb00, #33ccff, #764ba2);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-    opacity: 0;
-    animation: fadeInGlow 1.2s ease-in-out forwards, rainbowText 4s linear infinite;
-  }
+        .products-title {
+          font-size: 2.5rem;
+          font-weight: bold;
+          text-align: center;
+          background: linear-gradient(
+            90deg,
+            #ff416c,
+            #ff4b2b,
+            #ffbb00,
+            #33ccff,
+            #764ba2
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+          opacity: 0;
+          animation: fadeInGlow 1.2s ease-in-out forwards,
+            rainbowText 4s linear infinite;
+        }
 
-  @keyframes fadeInGlow {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+        @keyframes fadeInGlow {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-  @keyframes rainbowText {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+        @keyframes rainbowText {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
       `}</style>
     </div>
   );

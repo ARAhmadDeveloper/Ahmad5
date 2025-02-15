@@ -1,99 +1,109 @@
 export const data = [
-    {
-        mobileImage: require('../assets/1st.jpeg'),
-        mobileId: 1,
-        mobileName: 'Product 1',
-        mobilePrice: 19.99,
-        mobileDescription: 'Galaxy S25 Ultras rounded design expresses a unified identity for the Galaxy S series. With its sleek and strong titanium frame and a built-in S Pen, its an ultra-modern, vision of bold design.5',
-    },
-    {
-        mobileImage: require('../assets/2nd.jpeg'),
-        mobileId: 2,
-        mobileName: 'Product 2',
-        mobilePrice: 17.99,
-        mobileDescription: 'The Samsung Galaxy A72 is a premium smartphone with a powerful 8GB RAM, 128GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.',
-    },
-    {
-        mobileImage: require('../assets/3rd.png'),
-        mobileId: 3,
-        mobileName: 'Product 3',
-        mobilePrice: 24.99,
-        mobileDescription: 'The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.',
-    },
-    {
-        mobileImage: require('../assets/4th.jpeg'),
-        mobileId: 4,
-        mobileName: 'Product 4',
-        mobilePrice: 22.99,
-        mobileDescription: 'The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.',
-    },
-    {
-        mobileImage: require('../assets/5th.jpeg'),
-        mobileId: 5,
-        mobileName: 'Product 5',
-        mobilePrice: 19.99,
-        mobileDescription: 'The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.',
-    },
-    {
-        mobileImage: require('../assets/6th.avif'),
-        mobileId: 6,
-        mobileName: 'Product 6',
-        mobilePrice: 17.99,
-        mobileDescription: 'The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor',
-    },
-    {
-        mobileImage: require('../assets/7th.avif'),
-        mobileId: 7,
-        mobileName: 'Product 7',
-        mobilePrice: 24.99,
-        mobileDescription: 'The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.',
-    },
-    {
-        mobileImage: require('../assets/8th.avif'),
-        mobileId: 8,
-        mobileName: 'Product 8',
-        mobilePrice: 22.99,
-        mobileDescription: 'The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.',
-    },
-    {
-        mobileImage: require('../assets/9th.avif'),
-        mobileId: 9,
-        mobileName: 'Product 9',
-        mobilePrice: 19.99,
-        mobileDescription: 'The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.',
-    },
-    {
-        mobileImage: require('../assets/10th.avif'),
-        mobileId: 10,
-        mobileName: 'Product 10',
-        mobilePrice: 17.99,
-        mobileDescription: 'The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.',
-    },
-    {
-        mobileImage: require('../assets/11th.jpeg'),
-        mobileId: 11,
-        mobileName: 'Product 11',
-        mobilePrice: 24.99,
-        mobileDescription: 'The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.',
-    },
-    {
-        mobileImage: require('../assets/12th.jpeg'),
-        mobileId: 12,
-        mobileName: 'Product 12',
-        mobilePrice: 22.99,
-        mobileDescription: 'The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.',
-    },
-    {
-        mobileImage: require('../assets/13th.jpeg'),
-        mobileId: 13,
-        mobileName: 'Product 13',
-        mobilePrice: 19.99,
-        mobileDescription: 'The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.',
-    }
-]
-
-
-
+  {
+    mobileImage: require("../assets/1st.jpeg"),
+    mobileId: 1,
+    mobileName: "Product 1",
+    mobilePrice: 19.99,
+    mobileDescription:
+      "Galaxy S25 Ultras rounded design expresses a unified identity for the Galaxy S series. With its sleek and strong titanium frame and a built-in S Pen, its an ultra-modern, vision of bold design.5",
+  },
+  {
+    mobileImage: require("../assets/2nd.jpeg"),
+    mobileId: 2,
+    mobileName: "Product 2",
+    mobilePrice: 17.99,
+    mobileDescription:
+      "The Samsung Galaxy A72 is a premium smartphone with a powerful 8GB RAM, 128GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.",
+  },
+  {
+    mobileImage: require("../assets/3rd.png"),
+    mobileId: 3,
+    mobileName: "Product 3",
+    mobilePrice: 24.99,
+    mobileDescription:
+      "The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.",
+  },
+  {
+    mobileImage: require("../assets/4th.jpeg"),
+    mobileId: 4,
+    mobileName: "Product 4",
+    mobilePrice: 22.99,
+    mobileDescription:
+      "The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.",
+  },
+  {
+    mobileImage: require("../assets/5th.jpeg"),
+    mobileId: 5,
+    mobileName: "Product 5",
+    mobilePrice: 19.99,
+    mobileDescription:
+      "The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.",
+  },
+  {
+    mobileImage: require("../assets/6th.avif"),
+    mobileId: 6,
+    mobileName: "Product 6",
+    mobilePrice: 17.99,
+    mobileDescription:
+      "The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor",
+  },
+  {
+    mobileImage: require("../assets/7th.avif"),
+    mobileId: 7,
+    mobileName: "Product 7",
+    mobilePrice: 24.99,
+    mobileDescription:
+      "The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.",
+  },
+  {
+    mobileImage: require("../assets/8th.avif"),
+    mobileId: 8,
+    mobileName: "Product 8",
+    mobilePrice: 22.99,
+    mobileDescription:
+      "The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.",
+  },
+  {
+    mobileImage: require("../assets/9th.avif"),
+    mobileId: 9,
+    mobileName: "Product 9",
+    mobilePrice: 19.99,
+    mobileDescription:
+      "The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.",
+  },
+  {
+    mobileImage: require("../assets/10th.avif"),
+    mobileId: 10,
+    mobileName: "Product 10",
+    mobilePrice: 17.99,
+    mobileDescription:
+      "The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.",
+  },
+  {
+    mobileImage: require("../assets/11th.jpeg"),
+    mobileId: 11,
+    mobileName: "Product 11",
+    mobilePrice: 24.99,
+    mobileDescription:
+      "The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.",
+  },
+  {
+    mobileImage: require("../assets/12th.jpeg"),
+    mobileId: 12,
+    mobileName: "Product 12",
+    mobilePrice: 22.99,
+    mobileDescription:
+      "The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.",
+  },
+  {
+    mobileImage: require("../assets/13th.jpeg"),
+    mobileId: 13,
+    mobileName: "Product 13",
+    mobilePrice: 19.99,
+    mobileDescription:
+      "The Samsung Galaxy S21 Ultra is a premium smartphone with a powerful 12GB RAM, 256GB storage, and a 6.7-inch display. It features a 60Hz refresh rate and a 19:9 aspect ratio, making it a perfect choice for those looking for an eye-catching display and a powerful processor.",
+  },
+];
 
 // export const data = [
 //     {
@@ -227,4 +237,3 @@ export const data = [
 //       mobileDescription: 'The iPhone 16 features the new A17 chip, 5G enhanced, a new design with titanium materials, and advanced camera system.',
 //     }
 //   ];
-  

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { data } from '../../constant/constant'; // Your data
-import './home.css'; // Make sure to import the CSS file
+import React from "react";
+import { Link } from "react-router-dom";
+import { data } from "../../constant/constant"; // Your data
+import "./home.css"; // Make sure to import the CSS file
 
 function Home() {
   return (
@@ -24,8 +24,6 @@ function Home() {
 }
 
 export default Home;
-
-
 
 // import React from 'react';
 // import { Link } from 'react-router-dom';
@@ -56,5 +54,3 @@ export default Home;
 // }
 
 // export default Home;
-
-
