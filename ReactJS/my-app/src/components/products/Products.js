@@ -9,7 +9,7 @@ function Products() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
-      .get("http://localhost:8000/products")
+      .get(`${process.env.REACT_APP_BACKEND_URL}/products`)
       .then((response) => {
         console.log("Fetched products:", response.data);
         setProducts(response.data.products);

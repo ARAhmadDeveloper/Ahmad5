@@ -29,7 +29,7 @@ function CartedProducts() {
           </div>
         ))
       ) : (
-        <p className="empty-cart">No products in cart.</p>
+        <p className="empty-cart" style={{display:"flex", justifyContent:"center",alignItems:"center"}}>No products in cart.</p>
       )}
     </div>
   );

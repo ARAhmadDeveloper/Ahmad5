@@ -21,7 +21,7 @@ const DeleteBtn = ({ productId, onDelete }) => {
     setError(null);
 
     try {
-      const response = await axios.delete(`http://localhost:8000/products/delete/${productId}`);
+      const response = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/products/delete/${productId}`);
 
       if (response.status === 200) {
         console.log("Product Deleted Successfully:", response.data);

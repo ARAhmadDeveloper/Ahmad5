@@ -70,7 +70,7 @@ export default function NewPost() {
     };
   
     try {
-      const response = await fetch("http://localhost:8000/products/create", requestOptions);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/products/create`, requestOptions);
   
       // Check for a successful response
       if (response.ok) {
