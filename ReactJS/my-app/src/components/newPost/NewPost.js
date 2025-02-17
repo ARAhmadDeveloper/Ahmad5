@@ -122,14 +122,15 @@ export default function NewPost() {
               <h2 className="products-title">Create a New Post</h2>
               {error && <p className="error-message">{error}</p>}
               <div className="input-group">
-                <label htmlFor="image">Upload Image</label>
-                <input
+                <label htmlFor="image">Upload Image</label><br/>
+                <div style={{color: "white"}}>
+                {isLoading ?  "SuccessFully Uploaded" : <input
                   type="file"
                   name="image"
                   onChange={handleFileChange}
                   className="form-input file-input"
                   required
-                />
+                />}</div>
               </div>
               <div className="input-group">
                 <label htmlFor="name">Name</label>
