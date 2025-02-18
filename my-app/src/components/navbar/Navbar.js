@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./navbar.css";
+import { useSelector } from "react-redux";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // State for mobile menu
+  const cartItems = useSelector((store)=>store.cartProduct.cartItems)
+  console.log("cartItems =======>>>>>>>>>>________++_+_+_+", cartItems);
+  let cartCount = cartItems.length
 
   return (
     <nav className="navbar">
@@ -36,7 +40,9 @@ export function Navbar() {
           </li>
           <li className="cart-link">
             <Link to="/cartedProducts" onClick={() => setIsOpen(false)}>
-              Cart <span className="cart-badge">2</span>
+              Cart {cartCount === 0 ?<span></span> :
+              <span className="cart-badge">{cartCount}</span>
+            }
             </Link>
           </li>
         </ul>
