@@ -1,9 +1,9 @@
 ## Technologies Used
 
-- **Frontend:** ![ReactJS](https://img.shields.io/badge/ReactJS-61DBFB?style=for-the-badge&logo=react&logoColor=white) ![NextJS](https://img.shields.io/badge/NextJS-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-- **Backend:** ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-- **Mobile:** ![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-- **Database:** ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+- **Frontend:** ![ReactJS] ![NextJS]
+- **Backend:** ![Node.js] ![Express]
+- **Mobile:** ![React Native]
+- **Database:** ![MongoDB]
 
 ## 💬 Contact
 
