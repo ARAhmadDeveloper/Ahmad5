@@ -4,10 +4,10 @@ Here’s the tech stack powering this project—modern, robust, and awesome! �
 
 | **Category**   | **Technologies**                                                                                   |
 |-----------------|----------------------------------------------------------------------------------------------------|
-| **Frontend**   | ![ReactJS](https://img.shields.io/badge/ReactJS-61DBFB?style=for-the-badge&logo=react&logoColor=white) ![NextJS](https://img.shields.io/badge/NextJS-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) |
-| **Backend**    | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white) |
-| **Mobile**     | ![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=white) |
-| **Database**   | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) |
+| **Frontend**   | <span style="background-color: #61DBFB; color: white; padding: 2px 6px; border-radius: 3px;">ReactJS</span> <span style="background-color: #000000; color: white; padding: 2px 6px; border-radius: 3px;">NextJS</span> |
+| **Backend**    | <span style="background-color: #339933; color: white; padding: 2px 6px; border-radius: 3px;">Node.js</span> <span style="background-color: #000000; color: white; padding: 2px 6px; border-radius: 3px;">Express</span> |
+| **Mobile**     | <span style="background-color: #61DAFB; color: white; padding: 2px 6px; border-radius: 3px;">React Native</span> |
+| **Database**   | <span style="background-color: #47A248; color: white; padding: 2px 6px; border-radius: 3px;">MongoDB</span> |
 
 ---
 
@@ -30,4 +30,3 @@ Got questions, ideas, or just want to geek out over code? Reach out—I’d love
 ---
 
 > 🌍 *I’m always open to connecting and exploring new opportunities! Let’s build something amazing together!* ✨
-        
