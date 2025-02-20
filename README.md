@@ -25,6 +25,9 @@ Got questions, ideas, or just want to geek out over code? Reach out—I’d love
   <a href="https://linkedin.com/in/ar-ahmad-raza" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
+  <a href="https://wa.link/d584vf" target="_blank">
+    <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp" />
+  </a>
 </div>
 
 ---
