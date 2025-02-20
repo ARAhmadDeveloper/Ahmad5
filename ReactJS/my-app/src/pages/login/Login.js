@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
   const [formData, setFormData] = useState({
@@ -126,6 +126,7 @@ export default function LoginForm() {
 
         {/* Loading Indicator */}
         {isLoading && <p className="loading-text">Redirecting to Home...</p>}
+<h3 className="input-label customHeading">Don't have an Account <Link className="custom" to="/signup" >Register Here</Link> </h3>
       </form>
 
       <style jsx>{`
@@ -361,6 +362,24 @@ export default function LoginForm() {
             padding: 0.7rem 1rem;
           }
         }
+         .custom{
+            text-decoration: underline;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 10px;
+            margin-left:10px;
+            display: flex;
+            justify-content: center;
+            &:hover{
+              color: #764ba2;
+            }
+          }
+          .customHeading{
+            display: flex;
+            justify-content: center;
+            }
       `}</style>
     </div>
   );

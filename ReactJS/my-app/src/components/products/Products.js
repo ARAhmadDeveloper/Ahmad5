@@ -6,8 +6,8 @@ import Loading from "../loading/Loading";
 
 function Products() {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => { 
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/products`)
       .then((response) => {
@@ -16,7 +16,7 @@ function Products() {
         setLoading(false);
       })
       .catch((error) => console.error("Error fetching products:", error));
-  }, []);
+  }, []); 
 
   const toggleDescription = (index) => {
     setProducts((prevProducts) =>

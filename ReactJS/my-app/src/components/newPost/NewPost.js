@@ -124,7 +124,7 @@ export default function NewPost() {
               <div className="input-group">
                 <label htmlFor="image">Upload Image</label><br/>
                 <div style={{color: "white"}}>
-                {isLoading ?  "SuccessFully Uploaded" : <input
+                {isLoading ?  <div className="spinner"></div> : <input
                   type="file"
                   name="image"
                   onChange={handleFileChange}
@@ -352,6 +352,66 @@ export default function NewPost() {
           label{
           color: white;
           }
+          /* Responsive Design */
+  @media (max-width: 768px) {
+    .new-post-btn {
+      width: 100%;
+      padding: 0.7rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .popup-container {
+      width: 95%;
+      padding: 1.5rem;
+    }
+
+    .popup-form h3 {
+      font-size: 1.2rem;
+    }
+
+    .form-input {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .submit-btn {
+      padding: 0.9rem;
+      font-size: 1rem;
+    }
+
+    .products-title {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 5000px) {
+    .popup-container {
+      width: 80%;
+      padding: 1rem;
+      margin-right: 30px;
+      border-radius: 8px;
+    }
+
+    .form-input {
+      padding: 0.7rem;
+      font-size: 0.85rem;
+    }
+
+    .submit-btn {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .products-title {
+      font-size: 1.8rem;
+    }
+
+    .close-btn {
+      top: 5px;
+      right: 5px;
+      font-size: 0.9rem;
+    }
+  }
       `}</style>
     </div>
   );

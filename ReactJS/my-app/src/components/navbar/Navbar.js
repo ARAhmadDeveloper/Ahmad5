@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import NewPost from "../newPost/NewPost";
+import LogoutButton from "../logoutButton/LogoutButton";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ function Navbar() {
 
         {/* Desktop Menu */}
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-          {["Home", "Login", "Signup"].map((name) => (
+          {["Home","Contact"].map((name) => (
             <li key={name}>
               <a
                 href={`/${name.toLowerCase()}`}
@@ -26,7 +27,7 @@ function Navbar() {
             </li>
           ))}
         </ul>
-        <NewPost />
+        <NewPost  className="menu-toggle" />
         {/* Mobile Menu Toggle */}
         <button
           className="menu-toggle"
@@ -35,6 +36,7 @@ function Navbar() {
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
+        <LogoutButton/>
       </div>
 
       <style jsx>{`

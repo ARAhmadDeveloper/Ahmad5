@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -16,6 +16,7 @@ export default function Signup() {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
+    
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -25,18 +26,21 @@ export default function Signup() {
     setError(null);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/auth/signup`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
       console.log("Response Data: =======>>>>>>>", data);
 
       if (response.ok) {
         localStorage.setItem("token", data.token);
-console.log("Tooookkkkeeeennn ========>>>>>",data.token)
+        console.log("Tooookkkkeeeennn ========>>>>>", data.token);
         setTimeout(() => {
           navigate("/login");
         }, 2000);
@@ -105,6 +109,12 @@ console.log("Tooookkkkeeeennn ========>>>>>",data.token)
         </button>
 
         {isLoading && <p className="loading-text">Redirecting...</p>}
+        <h3 className="input-label customHeading">
+          Have an Account Login Here{" "}
+          <Link className="custom" to="/login">
+            Login Here
+          </Link>{" "}
+        </h3>
       </form>
 
       <style jsx>{`
@@ -284,44 +294,76 @@ console.log("Tooookkkkeeeennn ========>>>>>",data.token)
             padding: 1.5rem;
             border-radius: 15px;
           }
-          
+
           .form-title {
             font-size: 1.75rem;
           }
-          
+
           .form-input {
             padding: 0.7rem 1rem;
           }
         }
-          .products-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    background: linear-gradient(90deg, #ff416c, #ff4b2b, #ffbb00, #33ccff, #764ba2);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-    opacity: 0;
-    animation: fadeInGlow 1.2s ease-in-out forwards, rainbowText 4s linear infinite;
-  }
+        .products-title {
+          font-size: 2.5rem;
+          font-weight: bold;
+          text-align: center;
+          background: linear-gradient(
+            90deg,
+            #ff416c,
+            #ff4b2b,
+            #ffbb00,
+            #33ccff,
+            #764ba2
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+          opacity: 0;
+          animation: fadeInGlow 1.2s ease-in-out forwards,
+            rainbowText 4s linear infinite;
+        }
 
-  @keyframes fadeInGlow {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+        @keyframes fadeInGlow {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-  @keyframes rainbowText {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+        @keyframes rainbowText {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        .custom {
+          text-decoration: underline;
+          color: #fff;
+          font-weight: 500;
+          transition: color 0.3s ease;
+          cursor: pointer;
+          margin-bottom: 10px;
+          margin-left: 10px;
+          display: flex;
+          justify-content: center;
+          &:hover {
+            color: #764ba2;
+          }
+        }
+        .customHeading {
+          display: flex;
+          justify-content: center;
+        }
       `}</style>
     </div>
   );
