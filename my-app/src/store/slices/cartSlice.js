@@ -29,11 +29,29 @@ const cartSlice = createSlice({
     cartItems: [], // Ensure it's an array
   },
   reducers: {
+    // addToCart: (state, action) => {
+    //   state.cartItems.push(action.payload); // Add product to cart
+    // },
     addToCart: (state, action) => {
-      state.cartItems.push(action.payload); // Add product to cart
+      const existingItem = state.cartItems.find((item) => item.mobileId === action.payload.mobileId);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        state.cartItems.push({ ...action.payload, quantity: 1 }); // Ensure quantity exists
+      }
+    }, 
+    increaseQuantity: (state, action) => {
+      const item = state.cartItems.find((item) => item.mobileId === action.payload);
+      if (item) {
+        item.quantity += 1;
+        console.log("Successfully Increases===-=",item)
+      }
+      else {
+        console.log("Item not found in the cart")
+      }
     },
   },
 });
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart , increaseQuantity } = cartSlice.actions;
 export default cartSlice.reducer;
