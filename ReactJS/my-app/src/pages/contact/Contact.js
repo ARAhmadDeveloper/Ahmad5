@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./contact.css"; // Import the CSS file
 import Navbar from "../../components/navbar/Navbar";
+import ChatBot from "../../components/chatBot/ChatBot";
 
 
 
@@ -42,6 +43,7 @@ export default function Contact() {
 
   return (
     <div className="contact-container">
+      <ChatBot/>
       <Navbar/>
       <div className="contact-card">
         <h1>Contact Us</h1>

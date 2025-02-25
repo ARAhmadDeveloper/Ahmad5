@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Products from "../../components/products/Products";
 import Navbar from "../../components/navbar/Navbar"
 import { useState } from "react";
+import Chatbot from "../../components/chatBot/ChatBot";
 
 
 function Home(){
@@ -21,6 +22,7 @@ function Home(){
         return( 
             <div>
                 <Navbar/>
+                <Chatbot/>
                 <Products />
             </div>
         )

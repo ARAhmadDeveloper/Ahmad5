@@ -193,6 +193,7 @@ export default function NewPost() {
 
         /* Popup Overlay */
         .popup-overlay {
+        background: none;
           position: fixed;
           margin-top: 40px;
           left: 0;
@@ -215,9 +216,10 @@ export default function NewPost() {
           max-width: 600px;
           box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
           position: relative;
+          margin-top: 12%;
           animation: slideIn 0.5s ease-out;
           cursor: pointer;
-        }
+        } 
 
         /* Close Button */
         .close-btn {
