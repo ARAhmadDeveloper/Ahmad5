@@ -50,8 +50,36 @@ const cartSlice = createSlice({
         console.log("Item not found in the cart")
       }
     },
+    descreaseQuantity: (state, action) => {
+      const item = state.cartItems.find((item) => item.mobileId === action.payload);
+      if (item) {
+        item.quantity -= 1;
+        console.log("Successfully Decrease=-=-=-",item)
+      }
+      else{
+        console.log("Item not found in the cart")
+      }
+    },
+    removeFromCart: (state, action) => {
+      state.cartItems = state.cartItems.filter((item) => item.mobileId!== action.payload);
+      console.log("Item removed from the cart")
+      console.log("Cart after removal ====", state.cartItems)
+      // If quantity becomes zero, remove the item completely from the cart
+      state.cartItems = state.cartItems.filter((item) => item.quantity > 0);
+      console.log("Cart after removing zero-quantity items ====", state.cartItems)
+      // If the cart is empty after removing items, reset the cartItems array
+    },
+    clearCartAfterFormSubmission: (state, action) => {
+      if (action.payload === "clearCart") {
+        state.cartItems = [];  // Reset cart
+        console.log("Cart cleared after order submission");
+      } else {
+        state.cartItems = state.cartItems.filter((item) => item.mobileId !== action.payload);
+        console.log("Item removed:", action.payload);
+      }
+    }
   },
 });
 
-export const { addToCart , increaseQuantity } = cartSlice.actions;
+export const { addToCart , increaseQuantity, descreaseQuantity, removeFromCart, clearCartAfterFormSubmission } = cartSlice.actions;
 export default cartSlice.reducer;

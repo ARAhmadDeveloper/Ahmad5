@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../store/slices/productSlice";
 import { useEffect } from "react";
-import { store } from "../../store/store";
+
+
 
 function Products() {
   const dispatch = useDispatch();
   const products = useSelector((store) => store?.products?.products);
-  console.log(store);
+  // console.log(store);
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);

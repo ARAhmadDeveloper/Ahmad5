@@ -6,6 +6,7 @@ import Contact from "../pages/contact/Contact";
 import Navbar from "../components/navbar/Navbar";
 import ProductDetail from "../pages/productDetail/ProductDetail";
 import CartedProducts from "../pages/cartedProducts/CartedProducts";
+import Address from "../pages/address/Address";
 
 export default function Routing() {
   return (
@@ -25,6 +26,9 @@ export default function Routing() {
       </Routes>
       <Routes>
         <Route path="/cartedProducts" element={<CartedProducts />} />
+      </Routes>
+      <Routes>
+        <Route path="address" element={<Address/>} />
       </Routes>
     </BrowserRouter>
   );
