@@ -39,7 +39,6 @@ const DeliveryForm = () => {
     };
     e.preventDefault();
     dispatch(saveAddress(data)); // ✅ Save to Redux store
-    alert("Address saved successfully!");
     console.log("data=-=-=-,=-,=-.,-.,=-.,=-=<><><", data);
 
     setName("");
