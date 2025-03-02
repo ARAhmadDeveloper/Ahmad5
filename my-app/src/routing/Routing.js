@@ -7,6 +7,8 @@ import Navbar from "../components/navbar/Navbar";
 import ProductDetail from "../pages/productDetail/ProductDetail";
 import CartedProducts from "../pages/cartedProducts/CartedProducts";
 import Address from "../pages/address/Address";
+import Checkout from "../pages/checkout/Checkout";
+import Orders from "../pages/orders/Orders";
 
 export default function Routing() {
   return (
@@ -28,7 +30,13 @@ export default function Routing() {
         <Route path="/cartedProducts" element={<CartedProducts />} />
       </Routes>
       <Routes>
-        <Route path="address" element={<Address/>} />
+        <Route path="/address" element={<Address/>} />
+      </Routes>
+      <Routes>
+        <Route path="/checkout" element={<Checkout />} />
+      </Routes>
+      <Routes>
+        <Route path="/orders" element={<Orders />} />
       </Routes>
     </BrowserRouter>
   );

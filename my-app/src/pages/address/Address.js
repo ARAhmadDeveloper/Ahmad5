@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { clearCartAfterFormSubmission } from "../../store/slices/cartSlice";
 import "./address.css";
 import { useDispatch, useSelector } from "react-redux";
+import { saveAddress } from "../../store/slices/addressSlice";
 
 const DeliveryForm = () => {
   const [name, setName] = useState("");
@@ -36,6 +37,9 @@ const DeliveryForm = () => {
       city,
       postalCode,
     };
+    e.preventDefault();
+    dispatch(saveAddress(data)); // ✅ Save to Redux store
+    alert("Address saved successfully!");
     console.log("data=-=-=-,=-,=-.,-.,=-.,=-=<><><", data);
 
     setName("");
@@ -113,7 +117,8 @@ const DeliveryForm = () => {
         <div className="thank-you-message">
           <h2>🎉 Thank You for Purchasing! 🎉</h2>
           <p>Your order has been placed successfully.</p>
-          <button onClick={() => navigate("/")}>Home</button>
+          <button onClick={() => navigate("/home")} className="homeBtn">Home</button>
+          <button onClick={() => navigate("/orders")} className="ordersBtn" >Orders</button>
         </div>
       )}
     </div>

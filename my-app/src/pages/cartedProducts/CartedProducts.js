@@ -17,7 +17,7 @@ function CartedProducts() {
 
 
   const handleOrder = (e) => {
-    navigate("/address"); // Redirect to order summary page
+    navigate("/checkout"); // Redirect to order summary page
   };
 
 
@@ -78,8 +78,8 @@ function CartedProducts() {
       )}
       {totalPrice <= 1 ? "" :
       <div>
-      <h3 className="totalPrice">Total Price: ${totalPrice.toFixed(2)}</h3>
-      <button className="orderNowBtn" onClick={handleOrder}>Order Now</button>
+      {/* <h3 className="totalPrice">Total Price: ${totalPrice.toFixed(2)}</h3> */}
+      <button className="orderNowBtn" onClick={handleOrder}>Checkout</button>
       </div>
 }
     </div>

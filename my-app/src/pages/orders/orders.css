@@ -1,0 +1,84 @@
+/* Orders.css */
+.orders-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.orders-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.orders-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.order-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.order-card h2 {
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+.order-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+.no-orders {
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    margin-top: 50px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .orders-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
