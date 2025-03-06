@@ -27,7 +27,7 @@ const DeliveryForm = () => {
     if (!name || !mobile || !email || !address || !city || !postalCode) return;
 
     setSubmitted(true);
-    dispatch(clearCartAfterFormSubmission("clearCart"));
+    // dispatch(clearCartAfterFormSubmission("clearCart"));
     
     const data = {
       name,
