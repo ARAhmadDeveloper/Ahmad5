@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/web.jpg",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.arahmadraza.arahmaddeveloper"
     },
     "web": {
       "bundler": "metro",
