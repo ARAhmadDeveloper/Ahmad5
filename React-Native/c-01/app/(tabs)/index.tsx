@@ -3,32 +3,23 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableOpacity,
-  Image,
-  ScrollView,
-  SafeAreaView,
-  FlatList,
-  SectionList,
-  Button,
+  useColorScheme,
 } from "react-native";
 
 
 
 function HomeScreen() {
+
+  const isDarkMode = useColorScheme() === "dark";
+
+
   return (
     <View
     style={styles.container}
     >
       <Text
-       
+       style={isDarkMode ? styles.lightText : styles.darkText}
       >Home Screen</Text>
-      {/* create a stylish button */}
-      <Button
-        title="Press me"
-        style={styles.button}
-        color="#841584"
-        accessibilityLabel="Tap me to see an alert"
-      />
     </View>
   );
 }
@@ -38,21 +29,33 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F5FCFF",
+    backgroundColor: "#000000",
+    opacity: 0.9,
   },
-  button: {
-    backgroundColor: "#841584",
-    padding: 10,
-    borderRadius: 5,
-    marginTop: 20,
-    width: "80%",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  buttonText: {
-    color: "#FFFFFF",
-    fontSize: 16,
+  lightText: {
+    color: "#000",
+    fontSize: 40,
     fontWeight: "bold",
+    textAlign: "center",
+    padding: 16,
+    borderWidth: 1,
+    borderColor: "#000",
+    borderRadius: 8,
+    borderStyle: "solid",
+    overflow: "hidden",
+  },
+  darkText: {
+    color: "#FFF",
+    fontSize: 40,
+    fontWeight: "bold",
+    textAlign: "center",
+    padding: 16,
+    borderWidth: 1,
+    borderColor: "#000",
+    borderRadius: 8,
+    borderStyle: "solid",
+    position: "absolute",
+    overflow: "hidden",
   },
 });
 
