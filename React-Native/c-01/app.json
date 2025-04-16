@@ -16,7 +16,7 @@
         "foregroundImage": "./assets/images/facebook.jpg",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.arahmadraza.arahmaddeveloper"
+      "package": "com.arahmadraza.facebookclone"
     },
     "web": {
       "bundler": "metro",
