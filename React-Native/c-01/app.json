@@ -4,7 +4,7 @@
     "slug": "ar-ahmad-developer",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/facebook.jpg",
+    "icon": "./assets/images/facebook.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,10 +13,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/facebook.jpg",
+        "foregroundImage": "./assets/images/facebook.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.arahmadraza.facebookclone"
+      "package": "com.arahmadraza.facebook"
     },
     "web": {
       "bundler": "metro",
@@ -45,6 +45,7 @@
       "eas": {
         "projectId": "e6665161-2cf2-4613-a383-da9ab0ea63df"
       }
-    }
+    },
+    "owner": "arahmadraza"
   }
 }
