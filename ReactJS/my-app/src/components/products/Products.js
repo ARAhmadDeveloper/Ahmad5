@@ -7,16 +7,22 @@ import Loading from "../loading/Loading";
 function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  useEffect(() => { 
+console.log("Loading",loading)
+  useEffect(() => {
+    setLoading(true); // Start loading when fetching begins
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/products`)
+      .get(`https://deploy-production-0a12.up.railway.app/products`) // ✅ Needs protocol!
       .then((response) => {
-        console.log("Fetched products:", response.data);
-        setProducts(response.data.products);
-        setLoading(false);
+        // console.log("Fetched products:", response.data);
+        setProducts(response.data.products || []); // Fallback in case `.products` is undefined
       })
-      .catch((error) => console.error("Error fetching products:", error));
-  }, []); 
+      .catch((error) => {
+        console.error("Error fetching products:", error);
+      })
+      .finally(() => {
+        setLoading(false); // Stop loading in both success and error cases
+      });
+  }, []);
 
   const toggleDescription = (index) => {
     setProducts((prevProducts) =>

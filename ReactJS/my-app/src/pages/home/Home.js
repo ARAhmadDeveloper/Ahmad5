@@ -2,15 +2,14 @@ import { useNavigate } from "react-router-dom";
 import Products from "../../components/products/Products";
 import Navbar from "../../components/navbar/Navbar"
 import { useState } from "react";
-import Chatbot from "../../components/chatBot/ChatBot";
 
 
 function Home(){
       const [isLoading, setIsLoading] = useState(true);
-
+// console.log("isLoading",isLoading)
     const navigate = useNavigate();
     const Token = localStorage.getItem("token")
-    console.log("Token ========== <><><><><><><><><>",Token)
+    // console.log("Token ========== <><><><><><><><><>",Token)
     try {
         if(Token === null){
             setTimeout(() => {
@@ -22,7 +21,6 @@ function Home(){
         return( 
             <div>
                 <Navbar/>
-                <Chatbot/>
                 <Products />
             </div>
         )
