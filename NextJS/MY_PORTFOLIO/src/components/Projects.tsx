@@ -29,7 +29,7 @@ const Projects = () => {
       title: "E-Commerce Platform",
       description: "A full-featured e-commerce platform with user authentication, product management, and payment integration.",
       image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&auto=format&fit=crop&q=60",
-      technologies: ["React", "Redux"],
+      technologies: ["React", "Redux","Express", "Node.js", "MongoDB"],
       demoUrl: "https://heartfelt-crisp-d4ecc9.netlify.app",
       githubUrl: "https://github.com/arahmaddeveloper/Ahmad5/tree/master/My%20App/my-app",
       category: "fullstack",
