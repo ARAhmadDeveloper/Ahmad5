@@ -60,7 +60,8 @@ function Products() {
               <p className="product-price">Product Price - ${product.price}</p>
 
               {/* Conditionally render the product description */}
-              <p className="product-price" style={{ width: "100%" }}>
+              <p className="product-price" style={{ width: "230px",textAlign: "center" }}>
+                Description : 
                 {product.isExpanded || product.description.length <= 50
                   ? product.description
                   : `${product.description.slice(0, 50)}...`}
@@ -68,6 +69,7 @@ function Products() {
                 {product.description.length > 50 && (
                   <button
                     className="see-more-btn"
+                    
                     onClick={() => toggleDescription(index)}
                   >
                     {product.isExpanded ? "See Less" : "See More"}
