@@ -62,10 +62,10 @@ const Skills = () => {
     { name: 'Firebase', icon: '🔥', color: 'from-yellow-400 to-yellow-600' },
     { name: 'Vercel', icon: '🚀', color: 'from-blue-500 to-blue-700' },
     { name: 'Netlify', icon: '🌐', color: 'from-green-500 to-green-700' },
-    { name: 'Heroku', icon: '🏰', color: 'from-purple-500 to-purple-700' },
-    { name: 'Socket.io', icon: '🔌', color: 'from-gray-600 to-gray-800' },
-    { name: 'GraphQL', icon: '📈', color: 'from-pink-500 to-pink-700' },
-    { name: 'WebSockets', icon: '🌐', color: 'from-blue-400 to-blue-600' },
+    // { name: 'Heroku', icon: '🏰', color: 'from-purple-500 to-purple-700' },
+    // { name: 'Socket.io', icon: '🔌', color: 'from-gray-600 to-gray-800' },
+    // { name: 'GraphQL', icon: '📈', color: 'from-pink-500 to-pink-700' },
+    // { name: 'WebSockets', icon: '🌐', color: 'from-blue-400 to-blue-600' },
     { name: 'Sass/SCSS', icon: '🧵', color: 'from-pink-400 to-pink-600' },
     { name: 'Bootstrap', icon: '🧰', color: 'from-purple-400 to-purple-600' },
     { name: 'Material UI', icon: '📦', color: 'from-blue-500 to-blue-700' },
@@ -154,6 +154,18 @@ const Skills = () => {
                 </div>
                 <h4 className="font-semibold">Node.js</h4>
               </div>
+              <div className="text-center animate-float" style={{ animationDelay: "0.8s" }}>
+                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center">
+                  <span className="text-3xl">🔤</span>
+                </div>
+                <h4 className="font-semibold">TypeScript</h4>
+                </div>
+              <div className="text-center animate-float" style={{ animationDelay: "1s" }}>
+                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                  <span className="text-3xl">🟡</span>
+                </div>
+                <h4 className="font-semibold">JavaScript</h4>
+                </div>
             </div>
             <div className="mt-8 text-center">
               <p className="text-muted-foreground">
