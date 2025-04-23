@@ -11,7 +11,7 @@ console.log("Loading",loading)
   useEffect(() => {
     setLoading(true); // Start loading when fetching begins
     axios
-      .get(`https://deploy-production-0a12.up.railway.app/products`) // ✅ Needs protocol!
+      .get(`${process.env.REACT_APP_BACKEND_URL}/products`) // ✅ Needs protocol!
       .then((response) => {
         // console.log("Fetched products:", response.data);
         setProducts(response.data.products || []); // Fallback in case `.products` is undefined
