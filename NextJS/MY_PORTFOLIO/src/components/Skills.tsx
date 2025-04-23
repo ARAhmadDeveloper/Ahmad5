@@ -44,14 +44,32 @@ const Skills = () => {
   const skillsData: Skill[] = [
     { name: 'React.js', icon: '⚛️', color: 'from-cyan-400 to-blue-500' },
     { name: 'Next.js', icon: '▲', color: 'from-slate-700 to-slate-900' },
+    { name: 'Tailwind CSS', icon: '🌊', color: 'from-sky-400 to-sky-600' },
+    { name: 'TypeScript', icon: '🔤', color: 'from-blue-500 to-blue-700' },
+    { name: 'JavaScript', icon: '🟡', color: 'from-yellow-400 to-yellow-600' },
+    { name: 'HTML5', icon: '🔠', color: 'from-orange-500 to-orange-700' },
+    { name: 'CSS3', icon: '🎨', color: 'from-blue-500 to-blue-700' },
     { name: 'Node.js', icon: '🟢', color: 'from-green-400 to-green-600' },
     { name: 'MongoDB', icon: '🍃', color: 'from-green-500 to-emerald-600' },
     { name: 'Mongoose', icon: '🦦', color: 'from-amber-600 to-red-600' },
     { name: 'Redux', icon: '🔄', color: 'from-indigo-400 to-purple-600' },
-    { name: 'React Native', icon: '📱', color: 'from-blue-400 to-indigo-500' },
+    { name: 'React-Native', icon: '📱', color: 'from-blue-400 to-indigo-500' },
     { name: 'REST APIs', icon: '🔌', color: 'from-gray-600 to-gray-800' },
     { name: 'Express.js', icon: '🚂', color: 'from-gray-400 to-gray-600' },
     { name: 'Git/GitHub', icon: '🐙', color: 'from-purple-500 to-purple-700' },
+    { name: 'Figma', icon: '🎨', color: 'from-pink-500 to-pink-700' },
+    { name: 'Postman', icon: '📬', color: 'from-orange-500 to-orange-700' },
+    { name: 'Firebase', icon: '🔥', color: 'from-yellow-400 to-yellow-600' },
+    { name: 'Vercel', icon: '🚀', color: 'from-blue-500 to-blue-700' },
+    { name: 'Netlify', icon: '🌐', color: 'from-green-500 to-green-700' },
+    { name: 'Heroku', icon: '🏰', color: 'from-purple-500 to-purple-700' },
+    { name: 'Socket.io', icon: '🔌', color: 'from-gray-600 to-gray-800' },
+    { name: 'GraphQL', icon: '📈', color: 'from-pink-500 to-pink-700' },
+    { name: 'WebSockets', icon: '🌐', color: 'from-blue-400 to-blue-600' },
+    { name: 'Sass/SCSS', icon: '🧵', color: 'from-pink-400 to-pink-600' },
+    { name: 'Bootstrap', icon: '🧰', color: 'from-purple-400 to-purple-600' },
+    { name: 'Material UI', icon: '📦', color: 'from-blue-500 to-blue-700' },
+    { name: 'Chakra UI', icon: '💎', color: 'from-teal-400 to-teal-600' }
   ];
 
   const containerVariants = {
