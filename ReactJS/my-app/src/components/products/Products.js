@@ -55,13 +55,29 @@ function Products() {
                 className="product-image"
               />
               <h3 className="product-name">
-                Product Name: <br /> {product.name}
+              <span style={{color: "yellowgreen",}}> Product Name:</span> <br /> {product.name}
               </h3>
-              <p className="product-price">Product Price - ${product.price}</p>
+              <p className="product-price">
+                <span style={{ color: "yellowgreen" }}>Product Price - </span> $
+                {product.price}
+              </p>
 
               {/* Conditionally render the product description */}
-              <p className="product-price" style={{ width: "230px",textAlign: "center" }}>
-                Description : 
+              <p
+                className="product-price"
+                style={{ width: "230px", textAlign: "center" }}
+              >
+                <span
+                  style={{
+                    fontSize: "1rem",
+                    color: "yellowgreen",
+                    fontWeight: "500",
+                    width: "230px",
+                    textAlign: "center",
+                  }}
+                >
+                  Description:{" "}
+                </span>
                 {product.isExpanded || product.description.length <= 50
                   ? product.description
                   : `${product.description.slice(0, 50)}...`}
@@ -69,7 +85,6 @@ function Products() {
                 {product.description.length > 50 && (
                   <button
                     className="see-more-btn"
-                    
                     onClick={() => toggleDescription(index)}
                   >
                     {product.isExpanded ? "See Less" : "See More"}
