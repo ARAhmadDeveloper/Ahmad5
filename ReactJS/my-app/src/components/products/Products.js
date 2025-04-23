@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Button from "../deleteBtn/DeleteBtn";
-import "./product.css"
+import "./product.css";
 import Loading from "../loading/Loading";
 
 function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-console.log("Loading",loading)
+  console.log("Loading", loading);
   useEffect(() => {
     setLoading(true); // Start loading when fetching begins
     axios
@@ -39,21 +39,28 @@ console.log("Loading",loading)
   };
 
   return (
-    
     <div className="products-container">
       <h2 className="products-title">Our Products</h2>
       <div className="products-grid">
         {Array.isArray(products) && products.length > 0 ? (
           products.map((product, index) => (
-            <div key={product._id} className="product-card" style={{ animationDelay: `${index * 0.1}s` }}>
-              <img src={product.image} alt={product.name} className="product-image" />
+            <div
+              key={product._id}
+              className="product-card"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="product-image"
+              />
               <h3 className="product-name">
                 Product Name: <br /> {product.name}
               </h3>
               <p className="product-price">Product Price - ${product.price}</p>
 
               {/* Conditionally render the product description */}
-              <p className="product-price" style={{width: '100%'}}>
+              <p className="product-price" style={{ width: "100%" }}>
                 {product.isExpanded || product.description.length <= 50
                   ? product.description
                   : `${product.description.slice(0, 50)}...`}
@@ -72,7 +79,7 @@ console.log("Loading",loading)
           ))
         ) : (
           // <p className="no-products">No products available.</p>
-         <Loading />
+          <Loading />
         )}
       </div>
       <style jsx>{`
@@ -134,6 +141,7 @@ console.log("Loading",loading)
           font-size: 1rem;
           color: #67e6dc;
           font-weight: 500;
+          width: 230px;
         }
 
         .no-products {
@@ -157,51 +165,63 @@ console.log("Loading",loading)
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
           }
         }
-           .products-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    background: linear-gradient(90deg, #ff416c, #ff4b2b, #ffbb00, #33ccff, #764ba2);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-    opacity: 0;
-    animation: fadeInGlow 1.2s ease-in-out forwards, rainbowText 4s linear infinite;
-  }
+        .products-title {
+          font-size: 2.5rem;
+          font-weight: bold;
+          text-align: center;
+          background: linear-gradient(
+            90deg,
+            #ff416c,
+            #ff4b2b,
+            #ffbb00,
+            #33ccff,
+            #764ba2
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+          opacity: 0;
+          animation: fadeInGlow 1.2s ease-in-out forwards,
+            rainbowText 4s linear infinite;
+        }
 
-  @keyframes fadeInGlow {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+        @keyframes fadeInGlow {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-  @keyframes rainbowText {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-    .see-more-btn {
-  background-color: transparent;
-  border: none;
-  color: #007bff;
-  cursor: pointer;
-  text-decoration: none;
-}
+        @keyframes rainbowText {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        .see-more-btn {
+          background-color: transparent;
+          border: none;
+          color: #007bff;
+          cursor: pointer;
+          text-decoration: none;
+        }
 
-.see-more-btn:hover {
-  color: #0056b3;
-}
-
+        .see-more-btn:hover {
+          color: #0056b3;
+        }
       `}</style>
     </div>
   );
 }
 
 export default Products;
-
