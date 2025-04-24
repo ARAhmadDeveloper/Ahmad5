@@ -62,14 +62,12 @@ const Skills = () => {
     { name: 'Firebase', icon: '🔥', color: 'from-yellow-400 to-yellow-600' },
     { name: 'Vercel', icon: '🚀', color: 'from-blue-500 to-blue-700' },
     { name: 'Netlify', icon: '🌐', color: 'from-green-500 to-green-700' },
-    // { name: 'Heroku', icon: '🏰', color: 'from-purple-500 to-purple-700' },
-    // { name: 'Socket.io', icon: '🔌', color: 'from-gray-600 to-gray-800' },
-    // { name: 'GraphQL', icon: '📈', color: 'from-pink-500 to-pink-700' },
-    // { name: 'WebSockets', icon: '🌐', color: 'from-blue-400 to-blue-600' },
     { name: 'Sass/SCSS', icon: '🧵', color: 'from-pink-400 to-pink-600' },
     { name: 'Bootstrap', icon: '🧰', color: 'from-purple-400 to-purple-600' },
     { name: 'Material UI', icon: '📦', color: 'from-blue-500 to-blue-700' },
-    { name: 'Chakra UI', icon: '💎', color: 'from-teal-400 to-teal-600' }
+    { name: 'Chakra UI', icon: '💎', color: 'from-teal-400 to-teal-600' },
+    { name: 'Framer Motion', icon: '🎞️', color: 'from-pink-500 to-pink-700' },
+    { name: 'Prettier', icon: '🎨', color: 'from-blue-500 to-blue-700' }
   ];
 
   const containerVariants = {
