@@ -13,6 +13,7 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL); // Log the backend URL
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -20,12 +21,15 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
   
     try {
-      const res = await fetch('http://localhost:5000/api/contact', {
+      console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL);
+      console.log("Form Data:", formData);
+  
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,19 +37,32 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
   
-      const data = await res.json();
+      const isJson = res.headers.get("content-type")?.includes("application/json");
+      const data = isJson ? await res.json() : null;
   
-      if (res.ok) {
-        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-        toast.success("Message sent successfully!", {
-          description: "I will get back to you as soon as possible.",
-        });
-      } else {
-        alert('Something went wrong: ' + data.message);
+      if (!res.ok) {
+        const errorMsg = data?.message || `Error ${res.status}: ${res.statusText}`;
+        console.warn("Backend responded with error:", errorMsg);
+        alert(errorMsg);
+        return;
       }
+  
+      // Success!
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+      });
+  
+      toast.success("Message sent successfully!", {
+        description: "I will get back to you as soon as possible.",
+      });
+  
     } catch (err) {
-      console.error(err);
-      alert('Network error 😬');
+      console.error("Network or fetch error:", err);
+      alert("Network error 😬. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
