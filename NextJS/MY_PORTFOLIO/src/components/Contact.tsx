@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
 import ContactSocial from "./ContactSocial";
 
 const Contact = () => {
