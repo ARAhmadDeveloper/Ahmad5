@@ -20,58 +20,37 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
   
     try {
-      const { name, email, phone, subject, message } = formData;
-  
-      // Validate phone number format
-      if (!/^\+?\d{10,15}$/.test(phone)) {
-        throw new Error("Invalid phone number format");
-      }
-  
-      const response = await fetch("/api/contacts", {
-        method: "POST",
+      const res = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          subject,
-          message,
-        }),
+        body: JSON.stringify(formData),
       });
   
-      const result = await response.json();
+      const data = await res.json();
   
-      if (!response.ok || result.error) {
-        throw new Error(result.error || "Something went wrong");
+      if (res.ok) {
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+        toast.success("Message sent successfully!", {
+          description: "I will get back to you as soon as possible.",
+        });
+      } else {
+        alert('Something went wrong: ' + data.message);
       }
-  
-      toast.success("Message sent successfully!", {
-        description: "I will get back to you as soon as possible.",
-      });
-  
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error: any) {
-      console.error("Error submitting form:", error.message);
-      toast.error("Failed to send message", {
-        description: error.message || "Please try again later.",
-      });
+    } catch (err) {
+      console.error(err);
+      alert('Network error 😬');
     } finally {
       setIsSubmitting(false);
     }
   };
+  
   
 
   return (
