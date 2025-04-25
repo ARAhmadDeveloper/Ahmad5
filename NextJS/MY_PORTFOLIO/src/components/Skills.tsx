@@ -66,7 +66,6 @@ const Skills = () => {
     { name: 'Bootstrap', icon: '🧰', color: 'from-purple-400 to-purple-600' },
     { name: 'Material UI', icon: '📦', color: 'from-blue-500 to-blue-700' },
     { name: 'Chakra UI', icon: '💎', color: 'from-teal-400 to-teal-600' },
-    { name: 'Framer Motion', icon: '🎞️', color: 'from-pink-500 to-pink-700' },
     { name: 'Prettier', icon: '🎨', color: 'from-blue-500 to-blue-700' }
   ];
 

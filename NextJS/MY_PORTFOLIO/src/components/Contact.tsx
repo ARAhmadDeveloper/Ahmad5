@@ -23,30 +23,39 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+  
     try {
-      // Ensure only valid fields are inserted
       const { name, email, phone, subject, message } = formData;
-
-      // Validate phone number (optional)
+  
+      // Validate phone number format
       if (!/^\+?\d{10,15}$/.test(phone)) {
         throw new Error("Invalid phone number format");
       }
-
-      // Insert data into Supabase
-      const { error } = await supabase.from("contact_submissions").insert([
-        { name, email, phone, subject, message }, // Explicitly define fields
-      ]);
-
-      if (error) {
-        throw error;
+  
+      const response = await fetch("/api/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          subject,
+          message,
+        }),
+      });
+  
+      const result = await response.json();
+  
+      if (!response.ok || result.error) {
+        throw new Error(result.error || "Something went wrong");
       }
-
+  
       toast.success("Message sent successfully!", {
         description: "I will get back to you as soon as possible.",
       });
-
-      // Reset form
+  
       setFormData({
         name: "",
         email: "",
@@ -63,6 +72,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
+  
 
   return (
     <section id="contact" className="py-20 bg-secondary/50">
