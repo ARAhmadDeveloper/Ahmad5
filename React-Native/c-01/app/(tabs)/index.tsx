@@ -105,6 +105,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+    margin: 0,
   },
   logo: {
     fontSize: 50,
