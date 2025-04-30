@@ -98,105 +98,105 @@ export default function App() {
 }
 
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     padding: 20,
-//   },
-//   logo: {
-//     fontSize: 50,
-//     fontWeight: 'bold',
-//     color: '#1877F2',
-//     marginBottom: 50,
-//     fontFamily: 'sans-serif-medium',
-//   },
-//   inputContainer: {
-//     width: '100%',
-//   },
-//   input: {
-//     height: 50,
-//     borderWidth: 1,
-//     width: '100%',
-//     borderColor: '#ddd',
-//     borderRadius: 6,
-//     marginBottom: 15,
-//     paddingHorizontal: 15,
-//     fontSize: 16,
-//   },
-//   loginButton: {
-//     backgroundColor: '#1877F2',
-//     width: '100%',
-//     paddingVertical: 12,
-//     borderRadius: 6,
-//     alignItems: 'center',
-//     marginTop: 10,
-//   },
-//   loginButtonText: {
-//     color: '#fff',
-//     fontSize: 18,
-//     fontWeight: 'bold',
-//   },
-//   forgotText: {
-//     color: '#1877F2',
-//     marginTop: 15,
-//     fontSize: 14,
-//   },
-//   divider: {
-//     height: 1,
-//     backgroundColor: '#ccc',
-//     width: '100%',
-//     marginVertical: 30,
-//   },
-//   createButton: {
-//     backgroundColor: '#42b72a',
-//     paddingVertical: 12,
-//     paddingHorizontal: 30,
-//     borderRadius: 6,
-//   },
-//   createButtonText: {
-//     color: '#fff',
-//     fontSize: 16,
-//     fontWeight: 'bold',
-//   },
-//   dashboard: {
-//     flex: 1,
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     backgroundColor: '#f0f2f5',
-//     padding: 30,
-//   },
-//   avatar: {
-//     width: 100,
-//     height: 100,
-//     borderRadius: 50,
-//     marginBottom: 20,
-//     borderWidth: 2,
-//     borderColor: '#1877F2',
-//   },
-//   welcome: {
-//     fontSize: 24,
-//     fontWeight: 'bold',
-//     color: '#333',
-//   },
-//   userEmail: {
-//     fontSize: 16,
-//     color: '#666',
-//     marginTop: 8,
-//     marginBottom: 40,
-//   },
-//   logoutButton: {
-//     backgroundColor: '#e53935',
-//     paddingVertical: 12,
-//     paddingHorizontal: 30,
-//     borderRadius: 6,
-//   },
-//   logoutText: {
-//     color: '#fff',
-//     fontSize: 16,
-//     fontWeight: 'bold',
-//   },
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  logo: {
+    fontSize: 50,
+    fontWeight: 'bold',
+    color: '#1877F2',
+    marginBottom: 50,
+    fontFamily: 'sans-serif-medium',
+  },
+  inputContainer: {
+    width: '100%',
+  },
+  input: {
+    height: 50,
+    borderWidth: 1,
+    width: '100%',
+    borderColor: '#ddd',
+    borderRadius: 6,
+    marginBottom: 15,
+    paddingHorizontal: 15,
+    fontSize: 16,
+  },
+  loginButton: {
+    backgroundColor: '#1877F2',
+    width: '100%',
+    paddingVertical: 12,
+    borderRadius: 6,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  loginButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  forgotText: {
+    color: '#1877F2',
+    marginTop: 15,
+    fontSize: 14,
+  },
+  divider: {
+    height: 1,
+    backgroundColor: '#ccc',
+    width: '100%',
+    marginVertical: 30,
+  },
+  createButton: {
+    backgroundColor: '#42b72a',
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+    borderRadius: 6,
+  },
+  createButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  dashboard: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#f0f2f5',
+    padding: 30,
+  },
+  avatar: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    marginBottom: 20,
+    borderWidth: 2,
+    borderColor: '#1877F2',
+  },
+  welcome: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+  },
+  userEmail: {
+    fontSize: 16,
+    color: '#666',
+    marginTop: 8,
+    marginBottom: 40,
+  },
+  logoutButton: {
+    backgroundColor: '#e53935',
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+    borderRadius: 6,
+  },
+  logoutText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
   
-// });
+});
