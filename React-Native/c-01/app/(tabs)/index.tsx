@@ -62,9 +62,7 @@ export default function App() {
         />
         <Text style={styles.welcome}>Welcome Back 👋</Text>
         <Text style={styles.userEmail}>{email}</Text>
-        <TouchableOpacity style={styles.logoutButton} onPress={() => setIsLoggedIn(false)}>
-          <Text style={styles.logoutText}>Log Out</Text>
-        </TouchableOpacity>
+
       </View>
     );
   }
