@@ -71,7 +71,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="#1877F2" barStyle="light-content" />
+      {/* <StatusBar backgroundColor="#1877F2" barStyle="light-content" />
       <Text style={styles.logo}>facebook</Text>
 
       <TextInput
@@ -80,7 +80,7 @@ export default function App() {
           placeholderTextColor="#888"
           value={email}
           onChangeText={setEmail}
-        />
+        /> */}
         <TextInput
           style={styles.input}
           placeholder="Password"
