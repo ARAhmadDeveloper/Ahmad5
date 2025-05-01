@@ -21,16 +21,6 @@ function Layout() {
   );
 }
 
-// Pages
-function Home() {
-  return <h1>Hello World</h1>;
-}
-
-function About() {
-  return <div>About</div>;
-}
-
-// Define router
 const router = createBrowserRouter([
   {
     path: "/",
