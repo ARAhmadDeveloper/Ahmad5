@@ -2,33 +2,22 @@
 import React from "react";
 import {
   createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-  Outlet,
+  RouterProvider
 } from "react-router-dom";
+import Login from "../pages/login/Login";
+import Demo from "../pages/demo/Demo";
 
-// Layout component
-function Layout() {
-  return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link> | <Link to="about">About Us</Link>
-      </nav>
-      <hr />
-      <Outlet />
-    </div>
-  );
-}
+
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: "about", element: <About /> },
-    ],
+    element: <Login />,
+  },
+  {
+    path: "/demo",
+    element: <Demo />,
   },
 ]);
 
