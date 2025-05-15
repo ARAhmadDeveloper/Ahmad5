@@ -5,7 +5,10 @@ import { User } from './user';
 // import Contact from "./contact/page"
 // import About from "./about/page"
 
-export default function Home() {
+export default async function Home() {
+  const data = await fetch('https://api.vercel.app/blog')
+  const posts = await data.json()
+  console.log(posts[0])
   return (
    <div>
 <Link href="/about">
@@ -20,6 +23,13 @@ export default function Home() {
         <User />
       </Suspense>
     </section>
+    <ul>
+      {posts.map((post) => (
+        <li key={post.id}>
+          <Link href={`/blog/${post.id}`}>{post.title}</Link>
+        </li>
+      ))}
+    </ul>
    </div>
   );
 }
