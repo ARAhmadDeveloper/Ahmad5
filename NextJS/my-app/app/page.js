@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { Suspense } from 'react';
 import { User } from './user';
 
-// import Contact from "./contact/page"
-// import About from "./about/page"
 
 export default async function Home() {
   const data = await fetch('https://api.vercel.app/blog')
@@ -13,6 +11,12 @@ export default async function Home() {
    <div>
 <Link href="/about">
  About Page
+</Link>
+<br />
+<Link href="/form">Form Page
+</Link>
+<br />
+<Link href="/blog">Blog Page
 </Link>
     {/* <Contact /> */}
     <h1>Hello Next JS</h1>
