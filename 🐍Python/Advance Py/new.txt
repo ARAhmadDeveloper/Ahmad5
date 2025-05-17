@@ -1,0 +1,6 @@
+Hello, Python! 
+ This is a new file. 
+ Hello, World! 
+ This is TXT file. 
+ Hello File! 
+ 
