@@ -440,6 +440,94 @@
 
 
 
+# Class Variables
+# class Car:
+#      totalObjectsCreates = 0
+
+#      def __init__(self, name, age):
+#         self.__name = name
+#         self.age = age
+#         Car.totalObjectsCreates += 1
+
+#      def getName(self):
+#          return self.__name + "  Hello"
+#      # end def
+
+#      def setName(self, new_name):
+#         self.__name = new_name
+#      # end def
+
+#      def polymorphismMethod(self):
+#          return "First Object Polymorphism"
+
+#      # end def
+        
+#      def FullName(self):
+#         return f"{self.__name} {self.age}"
+#     # end def
+#     # end def
+
+# class CarsShop(Car):
+#     totalObjectsCreates = 0
+#     def __init__(self, name, age, rollNo):
+#         super().__init__(name, age)
+#         self.rollNo = rollNo
+#         CarsShop.totalObjectsCreates += 1
+#     # end def
+
+#     def polymorphismMethod(self):
+#          return "Second Object Polymorphism"
+
+
+
+# firstObject = Car("Usman", 23)
+# # print(firstObject.getName())
+# print(firstObject.polymorphismMethod())
+
+# secondObject = CarsShop("sfdsdf", 435, 432)
+# # print(secondObject.getName())
+# print(secondObject.polymorphismMethod())
+
+# First2Object = Car("Hamza", 234)
+
+# print(Car.totalObjectsCreates)
+# print(CarsShop.totalObjectsCreates)
+
+
+
+
+
+
+
+
+
+# Static Method
+class Car:
+    def __init__(self, name, age):
+        self.__name = name
+        self.age = age
+
+    def FullName(self):
+        return f"{self.__name} {self.age}"
+    # end def
+
+    @staticmethod
+    def staticMethod():
+        return "Static Method"
+    # end def
+
+firstObject = Car("Usman", 23)
+print(firstObject.FullName())
+print(Car.staticMethod())
+
+
+
+
+
+
+
+
+
 
 
 
