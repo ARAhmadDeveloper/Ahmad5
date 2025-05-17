@@ -502,59 +502,237 @@
 
 
 # Static Method
-class Car:
-    def __init__(self, name, age):
-        self.__name = name
-        self.age = age
+# class Car:
+#     def __init__(self, name, age):
+#         self.__name = name
+#         self.age = age
 
-    def FullName(self):
-        return f"{self.__name} {self.age}"
+#     def FullName(self):
+#         return f"{self.__name} {self.age}"
+#     # end def
+
+#     @staticmethod
+#     def staticMethod():
+#         return "Static Method"
+#     # end def
+
+# firstObject = Car("Usman", 23)
+# print(firstObject.FullName())
+# print(Car.staticMethod())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Property Decorator
+# class Car:
+#     def __init__(self, name, age):
+#         self.__name = name
+#         self.age = age
+
+#     # @property
+#     def get_name(self):
+#         return self.__name
+#     # end def
+
+#     def name(self):
+#         return self.age
+#     # end def
+
+
+#     def set_name(self, new_name):
+#         self.__name = new_name
+#     # end def
+
+# firstObject = Car("Usman", 23)
+# # print(firstObject.get_name())
+# firstObject.set_name = "New Name"
+# # print(firstObject.get_name())
+# print(firstObject.age)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Class Inheritance and isinstance() Function
+
+# class Car:
+#      def __init__(self, name, age):
+#         self.__name = name
+#         self.age = age
+
+#      def getName(self):
+#          return self.__name + "  Hello"
+#      # end def
+
+#      def setName(self, new_name):
+#         self.__name = new_name
+#      # end def
+
+#      def polymorphismMethod(self):
+#          return "First Object Polymorphism"
+
+#      # end def
+        
+#      def FullName(self):
+#         return f"{self.__name} {self.age}"
+#     # end def
+#     # end def
+
+# class CarsShop(Car):
+#     def __init__(self, name, age, rollNo):
+#         super().__init__(name, age)
+#         self.rollNo = rollNo
+#     # end def
+
+#     def polymorphismMethod(self):
+#          return "Second Object Polymorphism"
+
+# secondObject = CarsShop("sfdsdf", 435, 432)
+# # print(secondObject.getName())
+# print(secondObject.polymorphismMethod())
+
+# print(isinstance(secondObject, Car))
+# print(isinstance(secondObject, CarsShop))
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Multiple Inheritence
+
+# class A:
+#     def AInfo(self):
+#         return "Hello"
+        
+#     # end def
+
+# class B:
+#     def BInfo(self):
+#         return "Hello B"
+
+# class AB(A, B):
+#     pass
+
+
+# ABObject = AB()
+
+# print(ABObject.AInfo())
+# print(ABObject.BInfo())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Decorators
+# Timing Function Execution
+# import time
+
+# def wrapper(fn):
+#     def actual(*args, **kwargs):
+#         start = time.time()
+#         result = fn(*args, **kwargs)
+#         end = time.time()
+#         print(f"{fn.__name__} ran in {end-start}")
+#         return result
+#     return actual
+#     # end def
+# # end def
+
+# @wrapper
+# def checkTime(n):
+#     return time.sleep(n)
+
+
+# checkTime(2)
+
+# @wrapper
+# def againCheck(a):
+#     return time.sleep(a)
+    
+# # end def
+
+# againCheck(3)
+
+
+
+
+
+
+
+
+
+
+# Debugging Function Calls
+import time
+
+def wrapper(fn):
+    def actual(*args, **kwargs):
+        start = time.time()
+        result = fn(*args, **kwargs)
+        end = time.time()
+        print(f"{fn.__name__} ran in {end-start}")
+        return result
+    return actual
     # end def
+# end def
 
-    @staticmethod
-    def staticMethod():
-        return "Static Method"
-    # end def
-
-firstObject = Car("Usman", 23)
-print(firstObject.FullName())
-print(Car.staticMethod())
+@wrapper
+def checkTime(n):
+    return time.sleep(n)
 
 
+checkTime(2)
 
+@wrapper
+def againCheck(a):
+    return time.sleep(a)
+    
+# end def
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+againCheck(3)
 
 
 
