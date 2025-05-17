@@ -336,29 +336,29 @@
 
 
 # Encapsulation
-class Car:
-     def __init__(self, name, age):
-        self.__name = name
-        self.age = age
+# class Car:
+#      def __init__(self, name, age):
+#         self.__name = name
+#         self.age = age
 
-     def getName(self):
-         return self.__name + "  Hello"
-     # end def
+#      def getName(self):
+#          return self.__name + "  Hello"
+#      # end def
 
-     def setName(self, new_name):
-        self.__name = new_name
-     # end def
+#      def setName(self, new_name):
+#         self.__name = new_name
+#      # end def
         
-     def FullName(self):
-        return f"{self.__name} {self.age}"
-    # end def
-    # end def
+#      def FullName(self):
+#         return f"{self.__name} {self.age}"
+#     # end def
+#     # end def
 
-class CarsShop(Car):
-    def __init__(self, name, age, rollNo):
-        super().__init__(name, age)
-        self.rollNo = rollNo
-    # end def
+# class CarsShop(Car):
+#     def __init__(self, name, age, rollNo):
+#         super().__init__(name, age)
+#         self.rollNo = rollNo
+#     # end def
 
 
 
@@ -369,16 +369,80 @@ class CarsShop(Car):
 # print("Get Full Name",carObject.FullName())
 
 
-carObjectShop = CarsShop("Ali", 23, 32)
+# carObjectShop = CarsShop("Ali", 23, 32)
 # print("Inherite Object", carObjectShop.__name)
 # print("Inherite Object", carObjectShop.getName())
 # print("Inherite Object", carObjectShop.age)
 # print("Inherite Object", carObjectShop.rollNo)
 # print("Inherite Object FullName", carObjectShop.FullName())
 
-carObjectShop.setName("New Name  =------------")
+# carObjectShop.setName("New Name  =------------")
 
-print(carObjectShop.getName())
+# print(carObjectShop.getName())
+
+
+
+
+
+
+
+
+
+# Polymorphism
+# class Car:
+#      def __init__(self, name, age):
+#         self.__name = name
+#         self.age = age
+
+#      def getName(self):
+#          return self.__name + "  Hello"
+#      # end def
+
+#      def setName(self, new_name):
+#         self.__name = new_name
+#      # end def
+
+#      def polymorphismMethod(self):
+#          return "First Object Polymorphism"
+
+#      # end def
+        
+#      def FullName(self):
+#         return f"{self.__name} {self.age}"
+#     # end def
+#     # end def
+
+# class CarsShop(Car):
+#     def __init__(self, name, age, rollNo):
+#         super().__init__(name, age)
+#         self.rollNo = rollNo
+#     # end def
+
+#     def polymorphismMethod(self):
+#          return "Second Object Polymorphism"
+
+
+
+# firstObject = Car("Usman", 23)
+# # print(firstObject.getName())
+# print(firstObject.polymorphismMethod())
+
+# secondObject = CarsShop("sfdsdf", 435, 432)
+# # print(secondObject.getName())
+# print(secondObject.polymorphismMethod())
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,3 +1,5 @@
+![Python Logo](./assets/python-logo.png)
+
 # Data Types / Object Types in Python
 
 - Number: 1, 3.4, 2.4j, 1+3, Decimal, Fraction
@@ -14,3 +16,4 @@
 - Functions, Modules, Classes
 
 - Advance: Decorators, Generators, Iterators, MetaProgramming
+
