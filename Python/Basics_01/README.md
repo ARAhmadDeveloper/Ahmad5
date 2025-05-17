@@ -1,4 +1,5 @@
-![Python Logo](./assets/python-logo.png)
+![Python Logo](https://www.python.org/static/community_logos/python-logo.png)
+
 
 # Data Types / Object Types in Python
 
