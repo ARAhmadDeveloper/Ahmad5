@@ -706,33 +706,33 @@
 
 
 # Debugging Function Calls
-import time
+# import time
 
-def wrapper(fn):
-    def actual(*args, **kwargs):
-        start = time.time()
-        result = fn(*args, **kwargs)
-        end = time.time()
-        print(f"{fn.__name__} ran in {end-start}")
-        return result
-    return actual
-    # end def
-# end def
+# def wrapper(fn):
+#     def actual(*args, **kwargs):
+#         start = time.time()
+#         result = fn(*args, **kwargs)
+#         end = time.time()
+#         print(f"{fn.__name__} ran in {end-start}")
+#         return result
+#     return actual
+#     # end def
+# # end def
 
-@wrapper
-def checkTime(n):
-    return time.sleep(n)
+# @wrapper
+# def checkTime(n):
+#     return time.sleep(n)
 
 
-checkTime(2)
+# checkTime(2)
 
-@wrapper
-def againCheck(a):
-    return time.sleep(a)
+# @wrapper
+# def againCheck(a):
+#     return time.sleep(a)
     
-# end def
+# # end def
 
-againCheck(3)
+# againCheck(3)
 
 
 
