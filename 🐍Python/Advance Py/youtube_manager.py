@@ -1,14 +1,27 @@
 import json
 
 
+file_name = "youtube.txt"
+
+def load_videos():
+    try:
+        with open(file_name, "r") as file:
+            videos = json.load(file)
+            return videos
+    except FileNotFoundError:
+        return []
 
 
-def load_videos(videos):
-    pass
-
+def save_video_helper(videos):
+    with open(file_name, "w") as file:
+        json.dump(videos, file)
+        
 
 def add_video(videos):
-    pass
+    name = input("Enter the video name: ")
+    time = input("Enter the video time: ")
+    videos.append({"name": name, "time": time})
+    save_video_helper(videos)
 
 def update_video(videos):
     pass
@@ -17,7 +30,9 @@ def remove_video(videos):
     pass
 
 def view_all_videos(videos):
-    pass
+    for index, video in enumerate(videos, start=1):
+        print(f"{index}. {video['name']} - {video['time']}")
+    
 
 
 
@@ -28,6 +43,7 @@ def view_all_videos(videos):
 
 def main():
     videos = load_videos()
+    print(videos)
     while True:
         print("Youtube Manager")
         print("1. Add a video")
@@ -52,5 +68,6 @@ def main():
             case _:
                 print("Invalid choice")
         
-
-main()
+if __name__ == "__main__":
+    main()
+        
