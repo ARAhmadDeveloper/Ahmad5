@@ -1,5 +1,6 @@
 import pymongo
 import os
+from bson import ObjectId
 from dotenv import load_dotenv
 
 load_dotenv()  # Load environment variables from .env file
@@ -9,7 +10,7 @@ client = pymongo.MongoClient(os.getenv('MONGODB_URI'))
 
 db = client["mongowithpython"]
 
-collection = db["students"]
+collection = db["Videos"]
 
 
 def list_videos():
@@ -27,24 +28,49 @@ def add_video(title, description):
     collection.insert_one(video)
     print(f"Video {title} added successfully.")
     
-# Delete and update videos on the basis of index
-def update_video(title, description, video_id):
-    collection.update_one(
-        {"video_id": video_id},
-        {"$set": {"title": title, "description": description}}
-        )
-    print("....updating video....")
-    print(f"Video {title} updated successfully.")
+# # Delete and update videos on the basis of ID's
+# def update_video(_id, title, description):
+#     collection.update_one(
+#         {"_id": ObjectId(_id)},
+#         {"$set": {"title": title, "description": description}}
+#         )
+#     print("....updating video....")
+#     print(f"Video {title} updated successfully.")
     
-def delete_video(video_id):
-    collection.delete_one(
-        {"video_id": video_id}
-        )
-    print("....deleting video....")
-    print(f"Video {video_id} deleted successfully.")
     
+# def delete_video(_id):
+#     collection.delete_one(
+#         {"_id": ObjectId(_id)}
+#         )
+#     print("....deleting video....")
+#     print(f"Video {_id} deleted successfully.")
     
 
+
+def update_video(_id, title, description):
+    try:
+        result = collection.update_one(
+            {"_id": ObjectId(_id)},
+            {"$set": {"title": title, "description": description}}
+        )
+        print("....updating video....")
+        if result.modified_count:
+            print(f"✅ Video {_id} updated successfully.")
+        else:
+            print(f"⚠️ Video {_id} not found or nothing was updated.")
+    except Exception as e:
+        print(f"❌ Error updating video: {e}")
+
+def delete_video(_id):
+    try:
+        result = collection.delete_one({"_id": ObjectId(_id)})
+        print("....deleting video....")
+        if result.deleted_count:
+            print(f"✅ Video {_id} deleted successfully.")
+        else:
+            print(f"⚠️ Video {_id} not found.")
+    except Exception as e:
+        print(f"❌ Error deleting video: {e}")
 
 
 def main():
@@ -66,13 +92,13 @@ def main():
             description = input("Enter Video Description: ")
             add_video(title, description)
         elif choice == "3":
-            video_id = input("Enter Video ID: ")
-            title = input("Enter Video Title: ")
-            description = input("Enter Video Description: ")
-            update_video(title, description, video_id)
+            _id = input("Enter Video ID for update: ")
+            title = input("Enter Video Title for update: ")
+            description = input("Enter Video Description for update: ")
+            update_video(_id, title, description)
         elif choice == "4":
-            video_id = input("Enter Video ID: ")
-            delete_video(video_id)
+            _id = input("Enter Video ID for delete: ")
+            delete_video(_id)
         elif choice == "5":
             break
         else:
