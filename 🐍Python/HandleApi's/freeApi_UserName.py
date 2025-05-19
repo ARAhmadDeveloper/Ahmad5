@@ -1,3 +1,4 @@
+# Free API Users
 import requests
 
 def get_username():
@@ -24,6 +25,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
