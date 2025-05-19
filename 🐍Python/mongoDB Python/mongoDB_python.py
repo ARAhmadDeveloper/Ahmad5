@@ -100,6 +100,7 @@ def main():
             _id = input("Enter Video ID for delete: ")
             delete_video(_id)
         elif choice == "5":
+            print("Exiting the application...")
             break
         else:
             print("Invalid choice. Please try again.")
