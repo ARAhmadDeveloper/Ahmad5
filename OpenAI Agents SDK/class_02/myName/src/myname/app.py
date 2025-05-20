@@ -17,7 +17,7 @@ genai.configure(api_key=gemini_api_key)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Call the API to generate content
-response = model.generate_content("create a game in python.")
+response = model.generate_content("write a poetry about the moon.")
 print(response.text)
 
 
