@@ -47,6 +47,7 @@ async def main():
     )
     
     get_Question = input("Write your question here: \n")
+    print("<===============================================>")
     result = await Runner.run(agent,get_Question, run_config=config)
     print(result.final_output)
 
