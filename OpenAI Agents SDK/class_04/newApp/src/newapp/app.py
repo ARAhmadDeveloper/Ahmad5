@@ -46,7 +46,8 @@ async def main():
         model=model
     )
     
-    result = await Runner.run(agent, "Tell me about inheritance in programming.", run_config=config)
+    get_Question = input("Write your question here: \n")
+    result = await Runner.run(agent,get_Question, run_config=config)
     print(result.final_output)
 
 if __name__ == "__main__":
