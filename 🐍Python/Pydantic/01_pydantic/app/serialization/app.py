@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from typing import List
 from datetime import datetime
 
@@ -21,6 +21,13 @@ class User(BaseModel):
     tags: List[str] = []
     
     
+model_config =  ConfigDict(
+    json_encoders={
+        datetime: lambda v: v.strftime("%d-%m-%Y %H: %M: %S")
+    }
+)
+    
+    
     
     
 users = User(
@@ -32,18 +39,24 @@ users = User(
         city= "Hello City",
         postal_code="Hello 001123004",
     ),
-    create_at= datetime(2025, 3, 15,11, 30),
+    create_at= datetime(2025, 3, 15,11, 30, 22),
     is_active=True,
     tags=["premium", "Subscriber", "follower"]
 )
 
 # print(users)
 
-# Using module_dump -> dict
+# Using model_dump -> dict
 
 py_dict = users.model_dump()
 print(py_dict)
 
+print("========================================")
+
+# Using model_dump_json()
+
+py_json = users.model_dump_json()
+print(py_json)
 
 
 
