@@ -23,6 +23,5 @@ logging.info("Sending prompt to Gemini: %s", prompt)
 response = model.generate_content(prompt)
 logging.info("Received response:\n%s", response.text)
 
-print("=================================================")
 
 # print(response.text)
