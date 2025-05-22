@@ -43,7 +43,6 @@ def list_todos() -> list:
     except Exception as e:
         raise Exception(f"Failed to list todos: {str(e)}")
     
-    
 
 @function_tool
 def add_todo(title: str, description: str = "", due_date: str = "") -> Dict[str, Any]:
@@ -66,7 +65,6 @@ def add_todo(title: str, description: str = "", due_date: str = "") -> Dict[str,
     except Exception as e:
         raise Exception(f"Failed to add todo: {str(e)}")
 
-
 @function_tool
 def delete_todo(id: int) -> Dict[str, Any]:
     """Delete a todo from the MongoDB database by custom integer ID."""
@@ -79,11 +77,6 @@ def delete_todo(id: int) -> Dict[str, Any]:
     except Exception as e:
         raise Exception(f"Failed to delete todo: {str(e)}")
 
-    
-    
-    
-    
-    
     
 @function_tool
 def update_todo(id: int, title: str, description: str = "", due_date: str = "") -> Dict[str, Any]:
@@ -106,8 +99,6 @@ def update_todo(id: int, title: str, description: str = "", due_date: str = "") 
         return updated_todo
     except Exception as e:
         raise Exception(f"Failed to update todo: {str(e)}")
-
-
 
 
 agent = Agent(
