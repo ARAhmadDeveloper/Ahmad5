@@ -43,7 +43,7 @@ def list_todos() -> list:
     except Exception as e:
         raise Exception(f"Failed to list todos: {str(e)}")
     
-
+    
 
 @function_tool
 def add_todo(title: str, description: str = "", due_date: str = "") -> Dict[str, Any]:
