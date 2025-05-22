@@ -11,7 +11,7 @@ from datetime import datetime
 load_dotenv()
 
 # Get MongoDB connection string from environment variable
-mongodb_uri = "mongodb+srv://todoswithgenai:tNyMEYI67rnxsw11@mongowithpython.fdo0wtp.mongodb.net/"
+mongodb_uri = os.getenv('MONGODB_URI')
 if not mongodb_uri:
     raise ValueError("MONGODB_URI environment variable is not set")
 
@@ -28,6 +28,7 @@ client = AsyncOpenAI(
     api_key=gemini_api_key,
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
 )
+
 
 
 @function_tool
