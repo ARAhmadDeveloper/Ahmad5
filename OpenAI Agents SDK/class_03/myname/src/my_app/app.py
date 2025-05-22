@@ -24,4 +24,7 @@ response = model.generate_content(prompt)
 logging.info("Received response:\n%s", response.text)
 
 
+
+
+
 # print(response.text)
