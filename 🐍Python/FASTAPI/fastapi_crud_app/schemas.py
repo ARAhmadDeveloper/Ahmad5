@@ -1,14 +1,20 @@
 from pydantic import BaseModel # type: ignore
 
-class UserBase(BaseModel):
-    name: str
-    email: str
+class BookBase(BaseModel):
+    title: str
+    description: str
+    author: str
+    year: int = 2025
 
-class UserCreate(UserBase):
+class BookCreate(BookBase):
     pass
 
-class User(UserBase):
+
+class Book(BookBase):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+        
+
+

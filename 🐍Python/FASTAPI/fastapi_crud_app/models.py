@@ -1,8 +1,12 @@
+from database import Base
 from sqlalchemy import Column, Integer, String # type: ignore
-from .database import Base
 
-class User(Base):
+class Book(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String)
-    email = Column(String, unique=True, index=True)
+    title = Column(String, nullable=False, index=True)
+    description = Column(String, nullable=False, index=True)
+    author = Column(String, nullable=False, index=True)
+    year = Column(Integer)
+    
+

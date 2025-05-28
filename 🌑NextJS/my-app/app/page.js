@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { User } from './user';
+import { Navbar } from './components/layout/navbar';
 
 
 export default async function Home() {
@@ -9,6 +10,7 @@ export default async function Home() {
   console.log(posts[0])
   return (
    <div>
+    <Navbar/>
 <Link href="/about">
  About Page
 </Link>
