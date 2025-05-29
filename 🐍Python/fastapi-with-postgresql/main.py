@@ -61,6 +61,59 @@ def get_todos(db: Session = Depends(get_db)):
         raise HTTPException(status_code=500, detail=str(e))
     
     
+@app.get("/todos/{todo_id}", response_model=TodoResponse)
+def get_todo(todo_id: int, db: Session = Depends(get_db)):
+    try:
+        # Validate todo_id
+        if todo_id <= 0:
+            raise HTTPException(status_code=400, detail="Invalid todo ID. ID must be a positive integer.")
+            
+        db_todo = db.query(Todo).filter(Todo.id == todo_id).first()
+        if not db_todo:
+            raise HTTPException(status_code=404, detail="Todo not found")
+        return db_todo
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+    
+    
+    
+    
+    
+    
+
+@app.put("/todos/{todo_id}", response_model=TodoResponse)
+def update_todo(todo_id: int, todo: TodoCreate, db: Session = Depends(get_db)):
+    try:
+        db_todo = db.query(Todo).filter(Todo.id == todo_id).first()
+        if not db_todo:
+            raise HTTPException(status_code=404, detail="Todo not found")
+        for field, value in todo.model_dump().items():
+            setattr(db_todo, field, value)
+        db.commit()
+        db.refresh(db_todo)
+        return db_todo
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+    
+    
+@app.delete("/todos/{todo_id}", response_model=TodoResponse)
+def delete_todo(todo_id: int, db: Session = Depends(get_db)):
+    try:
+        db_todo = db.query(Todo).filter(Todo.id == todo_id).first()
+        if not db_todo:
+            raise HTTPException(status_code=404, detail="Todo not found")
+        db.delete(db_todo)
+        db.commit()
+        return db_todo
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+    
+    
+            
+    
 
     
     
