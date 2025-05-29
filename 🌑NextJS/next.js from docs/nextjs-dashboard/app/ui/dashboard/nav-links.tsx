@@ -23,15 +23,14 @@ const links = [
   },
   { name: 'Customers', href: '/dashboard/customer', icon: UserGroupIcon },
   { name: 'Admin', href: '/dashboard/admin', icon: DocumentDuplicateIcon },
-  { name: 'Login', href: '/login', icon: UserGroupIcon },
-  { name: 'Not Authorized', href: '/not-authorized', icon: UserGroupIcon },
+  { name: 'Login', href: '/dashboard/login', icon: UserGroupIcon },
+  { name: 'Not Authorized', href: '/dashboard/not-authorized', icon: UserGroupIcon },
 ];
 
 export default function NavLinks() {
   const pathname = usePathname();
   return (
     <>
-    <h1>Link PathName : {pathname}</h1>
        {links.map((link) => {
         const LinkIcon = link.icon;
         return (

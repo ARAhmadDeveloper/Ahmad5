@@ -1,19 +1,47 @@
-'use client'
-import Link from "next/link";       
-import { useRouter } from "next/navigation";
-export default function Dashboard(){
-    const router = useRouter();
-    return(
-        <div className="w-full flex-1 flex-col items-center justify-center gap-20 text-xl md:text-3xl lg:text-5xl text-center">
-            <h1 className="text-4xl font-bold animate-pulse text-blue-500 ">Dashboard Page</h1>
-            <div className="flex flex-col gap-4">
-                <Link href="/dashboard/invoices"
-                className="text-blue-500 hover:text-blue-600"
-                >Invoices</Link>
-                <Link href="/dashboard/customers"
-                className="text-blue-500 hover:text-blue-600"
-                >Customers</Link>
-            </div>
-        </div>
-    )
+import { Card } from "@/app/ui/dashboard/cards";
+import RevenueChart from "@/app/ui/dashboard/revenue-chart";
+import LatestInvoices from "@/app/ui/dashboard/latest-invoices";
+import { lusitana } from "@/app/ui/fonts";
+import { fetchLatestInvoices, fetchCardData } from "../lib/data";
+import { Suspense } from "react";
+import { CardSkeleton, RevenueChartSkeleton } from "../ui/skeletons";
+import { fetchRevenue } from "../lib/data";
+
+export default async function Page() {
+  const latestInvoices = await fetchLatestInvoices();
+  const data = await Promise.all([
+    fetchCardData(),
+    fetchRevenue(),
+    fetchLatestInvoices(),
+  ]);
+  const {
+    totalPaidInvoices,
+    totalPendingInvoices,
+    numberOfInvoices,
+    numberOfCustomers,
+  } = data[0];
+  return (
+    <main>
+      <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
+        Dashboard
+      </h1>
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <Suspense fallback={<CardSkeleton />}>
+        <Card title="Collected" value={totalPaidInvoices} type="collected" />
+        <Card title="Pending" value={totalPendingInvoices} type="pending" />
+        <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
+        <Card
+          title="Total Customers"
+          value={numberOfCustomers}
+          type="customers"
+        /></Suspense>
+      </div>
+      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
+        <Suspense fallback={<RevenueChartSkeleton />}>
+          <RevenueChart />
+        </Suspense>
+        <LatestInvoices latestInvoices={latestInvoices} />
+      </div>
+    </main>
+  );
 }
