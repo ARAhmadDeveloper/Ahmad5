@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     domains: ["i.pravatar.cc"],
   },
+  experimental: {
+    ppr: "incremental",
+  },
   /* config options here */
 };
 
