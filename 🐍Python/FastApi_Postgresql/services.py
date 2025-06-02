@@ -6,12 +6,6 @@ from fastapi import  HTTPException, status
 
 
 
-
-
-
-
-
-
 def create_user(db:Session, user:UserCreate):
     try:
         user_instance = Users(name=user.name, email=user.email, password=user.password)
