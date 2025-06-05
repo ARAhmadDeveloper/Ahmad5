@@ -12,7 +12,7 @@ class UserDB(Base):
     
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String(50), unique=True, index=True)
-    password = Column(String(50), index=True)
+    password = Column(String(500), index=True)
     created_at = Column(DateTime, default=func.now())
     is_active = Column(Boolean, default=True)
     

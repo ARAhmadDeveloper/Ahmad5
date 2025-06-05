@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy import Column, Integer, String, Boolean, func
 from sqlalchemy.ext.declarative import declarative_base
 import datetime
 from sqlalchemy.types import DateTime
@@ -16,16 +16,15 @@ class Todo(Base):
 
     
 
-class Todos(Base):
-    __tablename__ = "todos2"
+class User(Base):
+    
+    __tablename__ = "users"
+    
     
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(String, index=True)
-    description = Column(String, nullable=False)
-    completed = Column(Boolean, default=False)
-    status = Column(String, default="pending")
-    
-
-
+    email = Column(String(50), unique=True, index=True)
+    password = Column(String(500), index=True)
+    created_at = Column(DateTime, default=func.now())
+    is_active = Column(Boolean, default=True)
     
     
