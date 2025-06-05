@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from config.database import get_db
 from model.todo_model import Todo
+from utils.utils_helper import verify_token
 from validations.validation import TodoCreate
 
 
@@ -12,7 +13,7 @@ todo_router = APIRouter()
    
 #Create new Todo
 @todo_router.post("/create")
-def create_todo(todo: TodoCreate, db: Session = Depends(get_db)):
+def create_todo(todo: TodoCreate, token: str = Depends(verify_token), db: Session = Depends(get_db)):
     try:
        new_todo = Todo(
            title=todo.title,

@@ -37,10 +37,9 @@ def decode_token(token: str):
             "Status": 500   
         }
 
-
 def verify_token(token: str = Depends(oauth2_scheme)):
     try:
-        decoded_token = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM]) # type: ignore
+        decoded_token = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         if decoded_token:
             return decoded_token
         else:
@@ -53,4 +52,24 @@ def verify_token(token: str = Depends(oauth2_scheme)):
         print('An exception occurred')
         print(e)
         return HTTPException(status_code=401, detail="Invalid token")
+
+
+
+
+
+# def verify_token(token: str = Depends(oauth2_scheme)):
+#     try:
+#         decoded_token = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM]) # type: ignore
+#         if decoded_token:
+#             return decoded_token
+#         else:
+#             return HTTPException(status_code=401, detail="Token not parseable")
+#     except jwt.ExpiredSignatureError:
+#         raise HTTPException(status_code=401, detail="Token expired")
+#     except jwt.InvalidTokenError:
+#         raise HTTPException(status_code=401, detail="Invalid token")
+#     except Exception as e:
+#         print('An exception occurred')
+#         print(e)
+#         return HTTPException(status_code=401, detail="Invalid token")
     

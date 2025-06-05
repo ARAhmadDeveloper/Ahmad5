@@ -23,6 +23,7 @@ export default function UsersPage() {
 
   const fetchUsers = async () => {
     try {
+      // D:\Web and Mobile Application\Ahmad5\🐍Python\Fastapi with sql>
       const res = await fetch("http://localhost:8000/users");
       const data = await res.json();
       console.log("=======================", data);
