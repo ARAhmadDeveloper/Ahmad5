@@ -11,7 +11,7 @@ todo_router = APIRouter()
 
    
 #Create new Todo
-@todo_router.post("/")
+@todo_router.post("/create")
 def create_todo(todo: TodoCreate, db: Session = Depends(get_db)):
     try:
        new_todo = Todo(
@@ -71,7 +71,7 @@ def get_todo(todo_id: int, db: Session = Depends(get_db)):
         }
     
 
-@todo_router.put("/{todo_id}")
+@todo_router.put("/update/{todo_id}")
 def update_todo(todo_id: int, todo: TodoCreate, db: Session = Depends(get_db)):
     try:
         db_todo = db.query(Todo).filter(Todo.id == todo_id).first()
@@ -95,7 +95,7 @@ def update_todo(todo_id: int, todo: TodoCreate, db: Session = Depends(get_db)):
     
     
     
-@todo_router.delete("/{todo_id}")
+@todo_router.delete("/delete/{todo_id}")
 def delete_todo(todo_id: int, db: Session = Depends(get_db)):
     try:
         db_todo = db.query(Todo).filter(Todo.id == todo_id).first()

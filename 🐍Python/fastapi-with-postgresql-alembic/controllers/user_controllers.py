@@ -57,10 +57,11 @@ def register_new_user(user: UserCreate, db: Session = Depends(get_db)):
         
         # Create access token for the new user
         token = create_access_token(
-            data={"sub": new_user.email}, 
+            data={"sub": new_user.email, "user_id": new_user.id}, 
             expires_delta=timedelta(minutes=int(ACCESS_TOKEN_EXPIRE_MINUTES))
         )
-        
+        print("User_Email ======================", new_user.email)
+        print("user_id ======================", new_user.id)
         user_data = {
             "id": new_user.id,
             "email": new_user.email,
@@ -80,12 +81,6 @@ def register_new_user(user: UserCreate, db: Session = Depends(get_db)):
             "Status": 500
         }
 
-
-
-
-
-
-
 def login_user(user_credentials: UserLogin, db: Session = Depends(get_db)):
     try:
         user = db.query(UserDB).filter(UserDB.email == user_credentials.email).first()
@@ -96,7 +91,11 @@ def login_user(user_credentials: UserLogin, db: Session = Depends(get_db)):
         if not verify_password(user_credentials.password, user.password):
             raise HTTPException(status_code=401, detail="Incorrect password")
             
-        token = create_access_token(data={"sub": user.email}, expires_delta=timedelta(minutes=int(ACCESS_TOKEN_EXPIRE_MINUTES)))
+        token = create_access_token(
+            data={"sub": user.email, "user_id": user.id}, 
+            expires_delta=timedelta(minutes=int(ACCESS_TOKEN_EXPIRE_MINUTES))
+        )
+        print("user_id ======================", user.id)
         user_data = {
             "id": user.id,
             "email": user.email,
@@ -114,7 +113,6 @@ def login_user(user_credentials: UserLogin, db: Session = Depends(get_db)):
             "message": "Error logging in user",
             "Status": 500
         }
-
 
 
 
