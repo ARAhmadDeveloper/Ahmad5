@@ -26,7 +26,7 @@ def create_todo(todo: TodoCreate, token: str = Depends(verify_token), db: Sessio
 
 
 #Get all Todos
-@todo_router.get("/")
+@todo_router.get("/", dependencies=[Depends(verify_token)])
 def get_todos(db: Session = Depends(get_db), token: str = Depends(verify_token)):
      try:
          return get_todos_controller(db)
@@ -39,8 +39,8 @@ def get_todos(db: Session = Depends(get_db), token: str = Depends(verify_token))
    
    
     
-@todo_router.get("/{todo_id}")
-def get_todo(todo_id: int, db: Session = Depends(get_db)):
+@todo_router.get("/{todo_id}", dependencies=[Depends(verify_token)])
+def get_todo(todo_id: int,  db: Session = Depends(get_db)):
     try:
         return get_todo_controller(todo_id, db)
     except Exception as e:
@@ -51,7 +51,7 @@ def get_todo(todo_id: int, db: Session = Depends(get_db)):
         }
     
 
-@todo_router.put("/update/{todo_id}")
+@todo_router.put("/update/{todo_id}", dependencies=[Depends(verify_token)])
 def update_todo(todo_id: int, todo: TodoCreate, db: Session = Depends(get_db)):
     try:
         return update_todo_controller(todo_id, todo, db)
@@ -64,7 +64,7 @@ def update_todo(todo_id: int, todo: TodoCreate, db: Session = Depends(get_db)):
     
     
     
-@todo_router.delete("/delete/{todo_id}")
+@todo_router.delete("/delete/{todo_id}", dependencies=[Depends(verify_token)])
 def delete_todo(todo_id: int, db: Session = Depends(get_db)):
     try:
         return delete_todo_controller(todo_id, db)
