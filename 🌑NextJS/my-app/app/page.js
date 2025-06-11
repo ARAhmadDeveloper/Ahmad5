@@ -10,7 +10,7 @@ export default async function Home() {
   console.log(posts[0])
   return (
    <div>
-    <Navbar/>
+    {/* <Navbar/> */}
 <Link href="/about">
  About Page
 </Link>
