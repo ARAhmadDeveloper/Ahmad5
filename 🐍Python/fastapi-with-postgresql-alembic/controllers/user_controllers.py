@@ -1,6 +1,6 @@
 from datetime import timedelta
 from multiprocessing import get_context
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import Depends, HTTPException
 from sqlalchemy.orm import Session
 from config.database import get_db
 from model.user_model import UserDB
@@ -115,8 +115,8 @@ def login_user(user_credentials: UserLogin, db: Session = Depends(get_db)):
         }
 
 
-
-def logout_user(token: str, db: Session = Depends(get_db)):
+# Logout User on basis of token
+# def logout_user(token: str, db: Session = Depends(get_db)):
     try:
         # Decode the JWT token
         payload = decode_token(token)
@@ -135,7 +135,11 @@ def logout_user(token: str, db: Session = Depends(get_db)):
         # Invalidate token by adding to blacklist (you would need to implement token blacklisting)
         # For now, we'll just return success
         return {
-            "User": user,
+            "data": {
+                "id": user.id,
+                "email": user.email,
+                "is_active": user.is_active
+            },
             "message": "User logged out successfully",
             "Status": 200
         }
@@ -148,6 +152,33 @@ def logout_user(token: str, db: Session = Depends(get_db)):
             "Status": 500
         }
 
+
+
+
+
+# Logout User on basis of user_id
+def logout_user(user_id: str, db: Session = Depends(get_db)):
+    try:
+        # Verify user exists
+        user = db.query(UserDB).filter(UserDB.id == user_id).first()
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
+            
+        # Invalidate token by adding to blacklist (you would need to implement token blacklisting)
+        # For now, we'll just return success
+        return {
+            "User": user,
+            "message": "User logged out successfully",
+            "Status": 200
+        }
+    except HTTPException as he:
+        raise he
+    except Exception as e:
+        return {
+            "Error": str(e),
+            "message": "Error logging out user",
+            "Status": 500
+        }
 
 
 

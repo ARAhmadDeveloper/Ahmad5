@@ -26,16 +26,20 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
             "Status": 500
         }
 
+
+
 def decode_token(token: str):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         return payload
     except Exception as e:
         return {
-            "Error": str(e),
+            "Error": "Unable to decode token",
             "message": "Error decoding token",
             "Status": 500   
         }
+
+
 
 def verify_token(token: str = Depends(oauth2_scheme)):
     try:
