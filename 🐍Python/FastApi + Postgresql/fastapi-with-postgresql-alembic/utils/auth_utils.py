@@ -119,3 +119,4 @@ def verify_api_key(api_key_header: str = Depends(api_key_header)):
     except Exception as e:
         print('An exception occurred:', str(e))
         raise HTTPException(status_code=401, detail="Invalid API key")
+    

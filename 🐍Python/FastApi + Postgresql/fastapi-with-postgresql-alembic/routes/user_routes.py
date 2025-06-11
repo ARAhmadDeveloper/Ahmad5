@@ -60,3 +60,6 @@ def get_user(user_id: int, db: Session = Depends(get_db)):
             "message": "Error retrieving user",
             "Status": 500
         }
+
+
+
