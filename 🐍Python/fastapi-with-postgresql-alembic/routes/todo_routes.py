@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from config.database import get_db
 from controllers.todo_controllers import create_todo_controller, delete_todo_controller, get_todo_controller, get_todos_controller, update_todo_controller
 from model.todo_model import Todo
-from utils.utils_helper import verify_token
+from utils.auth_utils import verify_token
 from validations.validation import TodoCreate
 
 

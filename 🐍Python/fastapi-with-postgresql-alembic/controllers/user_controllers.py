@@ -4,21 +4,8 @@ from fastapi import Depends, HTTPException
 from sqlalchemy.orm import Session
 from config.database import get_db
 from model.user_model import UserDB
-from utils.utils_helper import ACCESS_TOKEN_EXPIRE_MINUTES, create_access_token, decode_token
+from utils.auth_utils import ACCESS_TOKEN_EXPIRE_MINUTES, create_access_token, decode_token, hash_password, verify_password
 from validations.validation import UserCreate, UserLogin
-from passlib.context import CryptContext
-
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-# =====================================================
-
-def verify_password(plain_password, hashed_password):
-    return pwd_context.verify(plain_password, hashed_password)
-
-def hash_password(plain_password):
-    return pwd_context.hash(plain_password)
-
-# =====================================================
 
 
 

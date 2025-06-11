@@ -4,6 +4,7 @@ from passlib.context import CryptContext
 from controllers.user_controllers import register_new_user, login_user, logout_user, get_user_by_id
 from sqlalchemy.orm import Session
 from config.database import get_db
+from utils.auth_utils import verify_api_key
 from validations.validation import UserCreate, UserLogin
 
 user_router = APIRouter()
@@ -22,7 +23,7 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
 
 
 
-@user_router.post("/login")
+@user_router.post("/login", dependencies=[Depends(verify_api_key)])
 def login(user_credentials: UserLogin, db: Session = Depends(get_db)):
     try:
         return login_user(user_credentials, db)
