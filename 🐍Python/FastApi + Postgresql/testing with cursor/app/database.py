@@ -36,7 +36,7 @@ def create_database():
 create_database()
 
 # Create SQLAlchemy engine
-engine = create_engine(settings.DATABASE_URL)
+engine = create_engine(settings.get_database_url())
 
 # Create SessionLocal class
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

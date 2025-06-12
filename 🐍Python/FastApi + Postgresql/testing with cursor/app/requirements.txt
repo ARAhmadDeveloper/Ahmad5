@@ -1,0 +1,18 @@
+annotated-types @ file:///C:/b/abs_0dmaoyhhj3/croot/annotated-types_1709542968311/work
+anyio==4.9.0
+attrs @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/attrs_1699473735254/work
+charset-normalizer @ file:///croot/charset-normalizer_1721748349566/work
+click @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/click_1699473800648/work
+cryptography @ file:///C:/b/abs_35g500qir4/croot/cryptography_1724940575116/work
+email_validator==2.2.0
+fastapi==0.115.12
+fastapi-cli==0.0.7
+fastjsonschema @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/python-fastjsonschema_1699475134300/work
+ipython @ file:///C:/b/abs_53it5seiim/croot/ipython_1726064251844/work
+ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
+pydantic==2.11.4
+pydantic-settings @ file:///C:/b/abs_fe1okp6jbe/croot/pydantic-settings_1730800848545/work
+pydantic_core==2.33.2
+python-multipart==0.0.20
+SQLAlchemy @ file:///C:/b/abs_7duxw5rxx8/croot/sqlalchemy_1725885067126/work
+typing-inspection==0.4.0
