@@ -11,6 +11,15 @@ Here’s the tech stack powering this project—modern, robust, and awesome! �
 
 ---
 
+
+## 🏅 Certificate
+
+[![Dashboard App Certificate](./dashboard-app-certificate-AR.png)](./dashboard-app-certificate-AR.png)
+
+> 📄 **Download/View Certificate:** [dashboard-app-certificate-AR.png](./dashboard-app-certificate-AR.png)
+
+---
+
 # 💬 Let’s Connect!
 
 Got questions, ideas, or just want to geek out over code? Reach out—I’d love to chat! 🌟
@@ -54,12 +63,6 @@ Got questions, ideas, or just want to geek out over code? Reach out—I’d love
 ### How It Looks:
 - When rendered, the "Tech Tidbit" appears as a standout, green-accented box that draws the eye without overwhelming the page.
 - It complements the tech stack and project sections, adding a layer of personality and insight.
-
-## 🏅 Certificate
-
-[![Dashboard App Certificate](./dashboard-app-certificate-AR.png)](./dashboard-app-certificate-AR.png)
-
-> 📄 **Download/View Certificate:** [dashboard-app-certificate-AR.png](./dashboard-app-certificate-AR.png)
 
 
 Let me know if you’d like a different tech fact (e.g., about React or Node.js) or more styling tweaks! 🌟
