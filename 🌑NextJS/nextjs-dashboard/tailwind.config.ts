@@ -6,25 +6,27 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
+ theme: {
     extend: {
-      gridTemplateColumns: {
-        '13': 'repeat(13, minmax(0, 1fr))',
-      },
-      colors: {
-        blue: {
-          400: '#2589FE',
-          500: '#0070F3',
-          600: '#2F6FEB',
+      keyframes: {
+        slideInDown: {
+          '0%':   { opacity: '0', transform: 'translateY(-10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        fadeIn: {
+          '0%':   { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        'slide-in-down': 'slideInDown 400ms ease-out forwards',
+        'fade-in':       'fadeIn 300ms ease-out forwards',
       },
     },
-    keyframes: {
-      shimmer: {
-        '100%': {
-          transform: 'translateX(100%)',
-        },
-      },
+  },
+  variants: {
+    extend: {
+      animation: ['motion-safe'],
     },
   },
   plugins: [require('@tailwindcss/forms')],
