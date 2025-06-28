@@ -83,10 +83,23 @@ class-no-03/
 
 ---
 
-## 📬 Contact
+## 📬 Get In Touch
 
-For feedback, suggestions, or collaboration:
-- [Your Email or Social Link]
+Ready to collaborate, share feedback, or just say hello? I'd love to hear from you! 🚀
+
+### 💌 Direct Contact
+- **📧 Email:** [arahmaddeveloper@gmail.com](mailto:arahmaddeveloper@gmail.com)
+- **💼 LinkedIn:** [Connect with me](https://www.linkedin.com/in/arahmaddeveloper/) - Let's network!
+- **🐙 GitHub:** [Check out my work](https://github.com/arahmaddeveloper) - Open source enthusiast
+
+### 🌐 Social Media
+- **📸 Instagram:** [@arahmaddeveloper](https://www.instagram.com/arahmaddeveloper/) - Behind the scenes
+- **📘 Facebook:** [@arahmaddeveloper](https://www.facebook.com/arahmaddeveloper/) - Stay connected
+
+### 🤝 Let's Collaborate
+Whether you have a project idea, want to discuss technology, or just want to connect with a fellow developer, feel free to reach out! I'm always excited to meet new people in the tech community.
+
+**Response Time:** I typically respond within 24 hours during weekdays! ⚡
 
 ---
 
