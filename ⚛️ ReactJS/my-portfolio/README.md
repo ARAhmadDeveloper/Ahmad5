@@ -83,9 +83,9 @@ my-portfolio/
 
 ## 📬 Contact
 
-- [LinkedIn](https://www.linkedin.com/in/ar-ahmad-raza/)
-- [GitHub](https://github.com/ArAhmadRaza)
-- [Email](mailto:arahmadraza5570@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/ARAhmadDeveloper/)
+- [GitHub](https://github.com/ARAhmadDeveloper)
+- [Email](mailto:ARAhmadDeveloper@gmail.com)
 
 ---
 
