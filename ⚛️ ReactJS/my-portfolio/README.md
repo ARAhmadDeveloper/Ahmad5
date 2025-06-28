@@ -1,6 +1,5 @@
 # 🚀 Ahmad Raza's Developer Portfolio
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://myportfoliowithreact.netlify.app/)  
 [Live Preview »](https://myportfoliowithreact.netlify.app/)
 
 ---
