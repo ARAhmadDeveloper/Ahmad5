@@ -62,11 +62,6 @@ class-no-1/
 
 ---
 
-## 📸 Screenshots
-
-![App Screenshot](public/logo192.png)
-
----
 
 ## 📚 Learn More
 
