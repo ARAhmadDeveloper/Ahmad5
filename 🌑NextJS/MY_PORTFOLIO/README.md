@@ -132,11 +132,6 @@ MY_PORTFOLIO/
 
 ---
 
-## 🌐 Live Demo
-
-> **Check it out:** [Your Netlify Link Here](https://your-netlify-link)
-
----
 
 ## 📬 Contact
 
