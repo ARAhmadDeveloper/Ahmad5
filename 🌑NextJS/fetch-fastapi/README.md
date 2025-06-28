@@ -82,15 +82,15 @@
 
 ### 🖥️ Desktop View
 
-![Desktop Demo](https://via.placeholder.com/800x400/667eea/ffffff?text=Desktop+User+Management+Interface)
+![Desktop Demo](./full-preview.png)
 
-### 📱 Mobile View
+### ✏️ Update User Preview
 
-![Mobile Demo](https://via.placeholder.com/400x600/764ba2/ffffff?text=Mobile+Responsive+Design)
+![Update User Modal](./update-preview.png)
 
-### 🎨 UI Components
+### ✨ Create User Preview
 
-![UI Components](https://via.placeholder.com/600x300/4ecdc4/ffffff?text=Modern+UI+Components)
+![Create User Modal](./create-preview.png)
 
 </div>
 

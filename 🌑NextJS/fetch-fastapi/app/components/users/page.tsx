@@ -12,7 +12,7 @@ interface User {
 
 export default function UsersPage() {
   const [users, setUsers] = useState<User[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [showPassword, setShowPassword] = useState<Record<number, boolean>>({});
   // const [selectedUser, setSelectedUser] = useState<User | null>(null);
@@ -22,8 +22,10 @@ export default function UsersPage() {
   const [countdown, setCountdown] = useState(10);
 
   const fetchUsers = async () => {
+    setLoading(true);
     try {
       // D:\Web and Mobile Application\Ahmad5\🐍Python\Fastapi with sql>
+      // D:\Web and Mobile Application\Ahmad5\🐍Python\FastApi + Postgresql\Fastapi with sql>
       const res = await fetch("http://localhost:8000/users");
       const data = await res.json();
       console.log("=======================", data);
@@ -33,7 +35,7 @@ export default function UsersPage() {
       console.error("Failed to fetch users:", err);
       setError("Failed to fetch users.");
     } finally {
-      setLoading(false); // <- this was missing!
+      setLoading(false);
     }
   };
 
@@ -161,10 +163,19 @@ export default function UsersPage() {
 
   if (loading)
     return (
-      <p className="text-center text-blue-600 text-lg">Loading users...</p>
+      <div className="min-h-screen bg-gradient-to-b from-purple-100 to-blue-200 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto mb-4"></div>
+          <p className="text-blue-600 text-lg font-semibold">Loading users...</p>
+        </div>
+      </div>
     );
   if (error)
-    return <p className="text-center text-red-600 text-lg">Error: {error}</p>;
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-purple-100 to-blue-200 flex items-center justify-center">
+        <p className="text-center text-red-600 text-lg font-semibold">Error: {error}</p>
+      </div>
+    );
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-100 to-blue-200 py-12 px-4 sm:px-6 lg:px-8 relative">

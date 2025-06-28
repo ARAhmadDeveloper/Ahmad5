@@ -1,6 +1,6 @@
-from fastapi import FastAPI, Depends, HTTPException # type: ignore
+from fastapi import FastAPI, Depends, HTTPException
 import schemas
-from sqlalchemy.orm import Session # type: ignore
+from sqlalchemy.orm import Session
 from models import Book
 from schemas import BookCreate
 from services import create_book, get_books, get_book
