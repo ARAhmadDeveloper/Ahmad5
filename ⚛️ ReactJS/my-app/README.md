@@ -178,25 +178,6 @@ my-app/
 
 ---
 
-## 🌟 Screenshots
-
-<div align="center">
-
-### Home Dashboard
-
-![Home Dashboard](https://via.placeholder.com/800x400/1a1a1a/67e6dc?text=Home+Dashboard)
-
-### Product Management
-
-![Product Management](https://via.placeholder.com/800x400/1a1a1a/67e6dc?text=Product+Management)
-
-### Authentication
-
-![Authentication](https://via.placeholder.com/800x400/1a1a1a/67e6dc?text=Authentication+Forms)
-
-</div>
-
----
 
 ## 🤝 Contributing
 
