@@ -617,13 +617,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### 🌟 **Support the Project**
 
 <div style="display: flex; justify-content: center; gap: 20px; margin-top: 15px; flex-wrap: wrap;">
-  <a href="https://github.com/ARAhmadDeveloper/fetch-fastapi" style="color: white; text-decoration: none; padding: 10px 20px; border: 2px solid white; border-radius: 25px; transition: all 0.3s ease; font-weight: 500;">
+  <a href="https://github.com/ARAhmadDeveloper/Ahmad5/tree/master/%F0%9F%90%8DPython/FastApi%20%2B%20Postgresql/Fastapi%20with%20sql" style="color: white; text-decoration: none; padding: 10px 20px; border: 2px solid white; border-radius: 25px; transition: all 0.3s ease; font-weight: 500;">
     ⭐ Star Repository
   </a>
-  <a href="https://github.com/ARAhmadDeveloper/fetch-fastapi/fork" style="color: white; text-decoration: none; padding: 10px 20px; border: 2px solid white; border-radius: 25px; transition: all 0.3s ease; font-weight: 500;">
+  <a href="https://github.com/ARAhmadDeveloper/Ahmad5/tree/master/%F0%9F%90%8DPython/FastApi%20%2B%20Postgresql/Fastapi%20with%20sql/fork" style="color: white; text-decoration: none; padding: 10px 20px; border: 2px solid white; border-radius: 25px; transition: all 0.3s ease; font-weight: 500;">
     🔀 Fork Project
   </a>
-  <a href="https://github.com/ARAhmadDeveloper/fetch-fastapi/issues" style="color: white; text-decoration: none; padding: 10px 20px; border: 2px solid white; border-radius: 25px; transition: all 0.3s ease; font-weight: 500;">
+  <a href="https://github.com/ARAhmadDeveloper/Ahmad5/tree/master/%F0%9F%90%8DPython/FastApi%20%2B%20Postgresql/Fastapi%20with%20sql/issues" style="color: white; text-decoration: none; padding: 10px 20px; border: 2px solid white; border-radius: 25px; transition: all 0.3s ease; font-weight: 500;">
     🐛 Report Issues
   </a>
 </div>
