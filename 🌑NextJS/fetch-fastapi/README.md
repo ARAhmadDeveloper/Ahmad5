@@ -588,7 +588,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   <a href="https://linkedin.com/in/arahmaddeveloper" style="color: white; text-decoration: none; padding: 12px 24px; border: 2px solid white; border-radius: 30px; transition: all 0.3s ease; font-weight: 500; display: flex; align-items: center; gap: 8px;">
     💼 LinkedIn
   </a>
-  <a href="mailto:contact@arahmaddeveloper.com" style="color: white; text-decoration: none; padding: 12px 24px; border: 2px solid white; border-radius: 30px; transition: all 0.3s ease; font-weight: 500; display: flex; align-items: center; gap: 8px;">
+  <a href="mailto:arahmaddeveloper@gmail.com" style="color: white; text-decoration: none; padding: 12px 24px; border: 2px solid white; border-radius: 30px; transition: all 0.3s ease; font-weight: 500; display: flex; align-items: center; gap: 8px;">
     📧 Email
   </a>
   <a href="https://twitter.com/arahmaddeveloper" style="color: white; text-decoration: none; padding: 12px 24px; border: 2px solid white; border-radius: 30px; transition: all 0.3s ease; font-weight: 500; display: flex; align-items: center; gap: 8px;">
