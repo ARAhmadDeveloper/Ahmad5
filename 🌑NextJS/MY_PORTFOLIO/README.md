@@ -151,7 +151,7 @@ Or use the contact form on the website!
 ---
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=435&lines=Made+with+💙+by" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.vercel.app/?font=Fira+Code&size=28&pause=1000&color=36BCF7&center=true&vCenter=true&width=435&lines=Made+with+💙+by" alt="Typing SVG" />
   
   <h1 style="font-family: 'Fira Code', monospace; font-size: 2.5rem; background: linear-gradient(90deg, #36BCF7, #7F53AC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; margin: 0; padding: 0;">
     ARAhmadDeveloper
