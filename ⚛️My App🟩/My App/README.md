@@ -110,11 +110,6 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ---
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
 
 <div align="center">
   <h2>Created with <span style="color: #e25555;">&#10084;&#65039;</span> by</h2>
