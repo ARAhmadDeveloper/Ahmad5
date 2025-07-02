@@ -1,56 +1,74 @@
-# 🌐 Animated Portfolio – Next.js & Tailwind CSS
+<div align="center">
 
-![Portfolio Banner](public/globe.svg)
+<img src="public/globe.svg" width="120" alt="Globe" />
 
-Welcome to an **animated, interactive, and modern portfolio** built with the latest web technologies! This project is designed to showcase your skills, projects, and testimonials with stunning animations and a seamless user experience.
+<h1 align="center">🌐 <span style="color:#7B2FF2;">Animated Portfolio</span> <br/> <span style="font-size:0.7em;">Next.js & Tailwind CSS</span></h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-15.3.4-blueviolet?style=for-the-badge&logo=nextdotjs" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4.0-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/ECharts-5.6.0-FF7043?style=for-the-badge&logo=apacheecharts&logoColor=white" />
+  <img src="https://img.shields.io/badge/Swiper-11.2.10-6332F6?style=for-the-badge&logo=swiper&logoColor=white" />
+</p>
+
+<p align="center">
+  <b>Welcome to an <span style="color:#7B2FF2;">animated, interactive, and modern portfolio</span> built with the latest web technologies!</b><br/>
+  <i>This project showcases your skills, projects, and testimonials with stunning animations and a seamless user experience.</i>
+</p>
+
+</div>
 
 ---
 
 ## ✨ Features
 
-- **Animated Hero Section**: Gradient backgrounds, floating elements, and typewriter effects for a memorable first impression.
-- **About Me**: Engaging introduction with animated charts and personal highlights.
-- **Portfolio Showcase**: Filterable, animated project gallery to display your best work.
-- **Skills Visualization**: Interactive ECharts-based skill charts with detailed breakdowns.
-- **Testimonials Carousel**: Swiper-powered, responsive client testimonials with avatars.
-- **Contact Section**: Modern, animated contact form for easy communication.
-- **Custom Animations**: Unique keyframes for gradients, floating, zoom, fade, and more.
-- **Responsive & Fast**: Built with Next.js App Router and Tailwind CSS for blazing speed and perfect mobile experience.
+- 🎬 **Animated Hero Section:** Gradient backgrounds, floating elements, and typewriter effects for a memorable first impression.
+- 👤 **About Me:** Engaging introduction with animated charts and personal highlights.
+- 🗂️ **Portfolio Showcase:** Filterable, animated project gallery to display your best work.
+- 📊 **Skills Visualization:** Interactive ECharts-based skill charts with detailed breakdowns.
+- 💬 **Testimonials Carousel:** Swiper-powered, responsive client testimonials with avatars.
+- 📬 **Contact Section:** Modern, animated contact form for easy communication.
+- 🌀 **Custom Animations:** Unique keyframes for gradients, floating, zoom, fade, and more.
+- 📱 **Responsive & Fast:** Built with Next.js App Router and Tailwind CSS for blazing speed and perfect mobile experience.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router, TypeScript)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + custom animations
-- **Charts**: [ECharts](https://echarts.apache.org/)
-- **Carousels**: [Swiper.js](https://swiperjs.com/)
-- **State & Effects**: React Hooks
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,typescript,echarts,swiper" />
+</div>
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router, TypeScript)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) + custom animations
+- **Charts:** [ECharts](https://echarts.apache.org/)
+- **Carousels:** [Swiper.js](https://swiperjs.com/)
+- **State & Effects:** React Hooks
 
 ---
 
 ## 🚀 Getting Started
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-2. **Run the development server:**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-3. **Open your browser:**
-   Visit [http://localhost:3000](http://localhost:3000) to see your animated portfolio in action!
+```bash
+# 1. Install dependencies
+npm install
+# or
+yarn install
+
+# 2. Run the development server
+npm run dev
+# or
+yarn dev
+```
+
+Open your browser and visit [http://localhost:3000](http://localhost:3000) to see your animated portfolio in action!
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 my-app/
 ├── app/                # Next.js app directory (entry, layout, global styles)
 ├── components/
@@ -80,8 +98,6 @@ my-app/
 
 ## 📦 Build & Deploy
 
-To build for production:
-
 ```bash
 npm run build
 ```
@@ -97,11 +113,9 @@ Deploy easily on [Vercel](https://vercel.com/) or your favorite platform!
 
 ---
 
-<h2 align="center">
+<div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=7B2FF2&center=true&vCenter=true&width=435&lines=Created+by+ARAhmadDeveloper" alt="Typing SVG" />
-</h2>
-
-<p align="center">
-  <b><span style="font-size:1.5em; color:#7B2FF2; letter-spacing:2px;">ARAhmadDeveloper</span></b> <br/>
+  <br/>
+  <b><span style="font-size:2em; color:#7B2FF2; letter-spacing:2px;">ARAhmadDeveloper</span></b> <br/>
   <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-purple?style=for-the-badge" />
-</p>
+</div>
