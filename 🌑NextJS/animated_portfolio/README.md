@@ -115,12 +115,17 @@ Deploy easily on [Vercel](https://vercel.com/) or your favorite platform!
 
 <div align="center">
   <!-- Manually add the missing first and last letters to ensure visibility -->
-  <span style="font-size:40px; color:#7b2ff2; letter-spacing:1px; font-weight:bold; vertical-align:middle;">
+  <span style="font-size:56px; color:#7b2ff2; letter-spacing:2px; font-weight:bold; vertical-align:middle;">
     A
     <img src="https://camo.githubusercontent.com/c393d66e1d1e8bb8a05840c7b0a284f93246f02c527cc56733a41b78d8b82ea9/68747470733a2f2f726561646d652d747970696e672d7376672e64656d6f6c61622e636f6d3f666f6e743d466972612b436f64652673697a653d32382670617573653d3130303026636f6c6f723d3742324646322663656e7465723d74727565267643656e7465723d747275652677696474683d343335266c696e65733d437265617465642b62792b415241686d6164446576656c6f706572" alt="Typing SVG" style="vertical-align:middle;"/>
     r
   </span>
   <br/>
-  <b><span style="font-size:2em; color:#7B2FF2; letter-spacing:2px;">ARAhmadDeveloper</span></b> <br/>
+  <b>
+    <span style="font-size:2.8em; color:#7b2ff2; letter-spacing:3px;">
+      ARAhmadDeveloper
+    </span>
+  </b>
+  <br/>
   <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-purple?style=for-the-badge" />
 </div>
