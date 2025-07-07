@@ -1,9 +1,10 @@
-import Portfolio from "@/components/Home";
+"use client";
+import PortfolioSection from "../components/sections/PortfolioSection";
 
 export default function Home() {
   return (
     <div>
-      <Portfolio />
+      <PortfolioSection />
     </div>
   );
 }

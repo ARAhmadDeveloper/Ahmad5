@@ -11,9 +11,35 @@ import { useActionState } from 'react';
 import { authenticate } from '@/app/lib/actions';
 import { useSearchParams } from 'next/navigation';
 
+// Utility to ensure callbackUrl is always a relative path (not absolute, not localhost)
+function sanitizeCallbackUrl(url: string | null): string {
+  if (!url) return '/dashboard';
+  try {
+    // If it's an absolute URL, parse and extract the pathname+search+hash
+    const parsed = new URL(url, typeof window !== 'undefined' ? window.location.origin : 'http://localhost');
+    // Only allow redirecting within your own site (relative path)
+    if (
+      parsed.origin === (typeof window !== 'undefined' ? window.location.origin : '') ||
+      parsed.hostname === 'localhost'
+    ) {
+      return parsed.pathname + parsed.search + parsed.hash;
+    }
+    // If it's a relative path, just return it
+    if (url.startsWith('/')) return url;
+    // Otherwise, fallback
+    return '/dashboard';
+  } catch {
+    // If URL parsing fails, fallback
+    return '/dashboard';
+  }
+}
+
 export default function LoginForm() {
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get('callbackUrl') || '/dashboard';
+  // Sanitize the callbackUrl to prevent redirecting to localhost or external domains
+  const rawCallbackUrl = searchParams.get('callbackUrl');
+  const callbackUrl = sanitizeCallbackUrl(rawCallbackUrl);
+
   const [errorMessage, formAction, isPending] = useActionState(
     authenticate,
     undefined,
