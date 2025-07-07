@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -146,7 +146,7 @@ export default function Navbar() {
                 <div className="p-4 border-b border-border">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                     <Image 
-                      src="/cloudverse-logo.png" 
+                      src={require("./CloudVerseLogo.png")}  
                       alt="CloudVerse Logo" 
                       width={28} 
                       height={28} 
