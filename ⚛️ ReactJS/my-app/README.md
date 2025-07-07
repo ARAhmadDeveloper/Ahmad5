@@ -197,9 +197,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Email**: [Your Email]
-- **LinkedIn**: [Your LinkedIn]
-- **Portfolio**: [Your Portfolio]
+- **Email**: arahmaddeveloper@gmail.com
+- **LinkedIn**: https://linkedin.com/in/arahmaddeveloper
+- **Facebook**: https://www.facebook.com/ARAhmaddeveloper
 
 ---
 
