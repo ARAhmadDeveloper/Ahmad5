@@ -8,30 +8,34 @@ export default function NewPost() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isImageUploading, setIsImageUploading] = useState(false);
+
 
   // Define the function to upload the image to Cloudinary
   const uploadImageToCloudinary = async (file) => {
     const formData = new FormData();
     formData.append('file', file);
-    formData.append('upload_preset', 'ARAhmad'); // Set your Cloudinary upload preset
+    formData.append('upload_preset', process.env.CLOUDINARY_UPLOAD_PRESET || 'unsigned_video'); // Set your Cloudinary upload preset
     formData.append('cloud_name', 'dk8ubm5fq'); // Set your Cloudinary cloud name
 
     try {
-      // Upload the image to Cloudinary
-      const response = await fetch('https://api.cloudinary.com/v1_1/dk8ubm5fq/image/upload', {
+      const CLOUDINARY_URL = process.env.APP_CLOUDINARY_URL || 'https://api.cloudinary.com/v1_1/dk8ubm5fq/image/upload';
+      // D:\deploy>
+
+      const response = await fetch(CLOUDINARY_URL, {
         method: 'POST',
         body: formData,
       });
 
       const data = await response.json();
       console.log('Cloudinary Response:', data);
+
       if (response.ok) {
-        // Return the URL of the uploaded image
-        console.log("URL ==============>>>>>>>>>", data.url)
-        let image = data.url;
-        return image; // This is the Cloudinary URL
+        let image = data.secure_url || data.url;
+        console.log("Uploaded Image URL:", image);
+        return image;
       } else {
-        throw new Error('Image upload failed: ' + data.message);
+        throw new Error('Image upload failed: ' + data.error?.message || data.message);
       }
     } catch (error) {
       console.error('Error uploading image:', error.message);
@@ -42,66 +46,77 @@ export default function NewPost() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
-    setError(null);
-  
-    // Ensure that the image URL is set correctly (from Cloudinary)
-    if (!image) {
-      setError("Image is required.");
-      setIsLoading(false);
+
+    // Don't allow submission while image is still uploading
+    if (isImageUploading) {
+      setError("Please wait until the image finishes uploading.");
       return;
     }
-  
-    // Create the request body as a JSON object
+
+    // Just in case — check again
+    if (!image) {
+      setError("Image is required.");
+      return;
+    }
+
+    setIsLoading(true);
+    setError(null);
+
     const raw = JSON.stringify({
-      name: name,
-      description: description,
-      image: image, // This is the Cloudinary URL
-      price: price,
+      name,
+      description,
+      image, // Cloudinary URL
+      price,
     });
-  
+
     const requestOptions = {
       method: "POST",
       headers: {
-        "Content-Type": "application/json", // Set the correct content type
+        "Content-Type": "application/json",
       },
       body: raw,
-      redirect: "follow",
     };
-  
-    try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/products/create`, requestOptions);
-  
-      // Check for a successful response
-      if (response.ok) {
-        // const data = await response.json();
-        setTimeout(() => {
-          setIsPopupOpen(false); // Close the popup on successful submit
-        }, 2000);
-        window.location.reload(); // Reload the page
 
+    try {
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/products/create`,
+        requestOptions
+      );
+
+      if (response.ok) {
+        setTimeout(() => {
+          setIsPopupOpen(false);
+        }, 2000);
+        window.location.reload();
       } else {
         const errorData = await response.json();
         setError(errorData.message || "Failed to create post");
       }
     } catch (err) {
-      console.error("Error submitting data:", err); // Log the error to the console
+      console.error("Error submitting data:", err);
       setError("Something went wrong. Please try again.");
     } finally {
       setIsLoading(false);
     }
   };
-  
+
+
   const handleFileChange = async (e) => {
     const file = e.target.files[0];
     if (file) {
+      setIsImageUploading(true);
       const imageUrl = await uploadImageToCloudinary(file);
       if (imageUrl) {
-        setImage(imageUrl); // Set the Cloudinary URL for the image
+        setImage(imageUrl); // ✅ supposed to update the image state
+      } else {
+        setError("Image upload failed. Try again.");
       }
+      setIsImageUploading(false);
     }
   };
-  
+
+
+
 
   return (
     <div>
@@ -122,16 +137,33 @@ export default function NewPost() {
               <h2 className="products-title">Create a New Post</h2>
               {error && <p className="error-message">{error}</p>}
               <div className="input-group">
-                <label htmlFor="image">Upload Image</label><br/>
-                <div style={{color: "white"}}>
-                {isLoading ?  <div className="spinner"></div> : <input
-                  type="file"
-                  name="image"
-                  onChange={handleFileChange}
-                  className="form-input file-input"
-                  required
-                />}</div>
+                <label htmlFor="image">Image</label>
+                <div style={{ position: "relative" }}>
+                  <input
+                    type="file"
+                    name="image"
+                    onChange={handleFileChange}
+                    className="form-input"
+                    required
+                    disabled={isImageUploading}
+                  />
+                  {isImageUploading && (
+                    <div className="spinner" style={{
+                      position: "absolute",
+                      top: "50%",
+                      right: "10px",
+                      transform: "translateY(-50%)"
+                    }}></div>
+                  )}
+                </div>
+                {image && (
+                  <div style={{ marginTop: "10px" }}>
+                    <img src={image} alt="Uploaded Preview" style={{ maxWidth: "100%", borderRadius: "8px" }} />
+                  </div>
+                )}
               </div>
+
+
               <div className="input-group">
                 <label htmlFor="name">Name</label>
                 <input
@@ -167,9 +199,10 @@ export default function NewPost() {
                 />
               </div>
 
-              <button type="submit" className="submit-btn" disabled={isLoading}>
-                {isLoading ? <div className="spinner"></div> : "Post Product"}
+              <button type="submit" className="submit-btn" disabled={isLoading || isImageUploading}>
+                {(isLoading || isImageUploading) ? <div className="spinner"></div> : "Post Product"}
               </button>
+
             </form>
           </div>
         </div>

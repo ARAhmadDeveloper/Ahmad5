@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "axios": "^1.8.4",
     "cloudinary": "^2.5.1",
     "cra-template": "1.2.0",
+    "emotion": "^11.0.0",
     "framer-motion": "^12.4.1",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
