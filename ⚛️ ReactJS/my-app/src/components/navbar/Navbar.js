@@ -37,7 +37,7 @@ function Navbar() {
           <li style={{ transitionDelay: `${0.2}s` }}>
             <NewPost />
           </li>
-          <li style={{ transitionDelay: `${0.3}s`, zIndex:'-23' }}>
+          <li style={{ transitionDelay: `${0.3}s` }}>
             <LogoutButton />
           </li>
         </ul>
@@ -46,7 +46,7 @@ function Navbar() {
       {/* Custom CSS */}
       <style jsx>{`
         .navbar {
-          position: absolute;
+          position: fixed;
           top: 0;
           left: 0;
           right: 0;
@@ -54,7 +54,7 @@ function Navbar() {
           backdrop-filter: blur(12px);
           box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
           z-index: 50;
-          padding: .5rem .5rem;
+          padding: .5rem 1rem;
           border-bottom: 1px solid rgba(103, 230, 220, 0.2);
         }
 

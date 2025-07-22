@@ -157,8 +157,8 @@ export default function NewPost() {
                   )}
                 </div>
                 {image && (
-                  <div style={{ marginTop: "10px" }}>
-                    <img src={image} alt="Uploaded Preview" style={{ maxWidth: "100%", borderRadius: "8px" }} />
+                  <div style={{ marginTop: "10px"}}>
+                    <img src={image} alt="Uploaded Preview" style={{ maxWidth: "100%", borderRadius: "8px", height: "100px", padding: "10px" }} />
                   </div>
                 )}
               </div>
@@ -447,6 +447,8 @@ export default function NewPost() {
       font-size: 0.9rem;
     }
   }
+    
+    
       `}</style>
     </div>
   );
